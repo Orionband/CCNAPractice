@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCNA Practice</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: #ffffff;
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 1px solid #dee2e6;
+        }
+
+        /* Header and Options Panel */
+        h1, h2 {
+            text-align: center;
+            color: #0d6efd;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        .options-panel {
+            padding: 20px;
+            background-color: #fdfdff;
+            border: 1px solid #e0e7ff;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+        .option-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .option-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            color: #495057;
+        }
+        .option-group input[type="number"], .option-group select {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ced4da;
+            width: 120px;
+            font-size: 1em;
+        }
+        .option-group-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .option-group-checkbox label {
+             margin-bottom: 0;
+        }
+
+        /* Buttons */
+        button {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        button:hover {
+            background-color: #0b5ed7;
+            box-shadow: 0 4px 10px rgba(13,110,253,0.3);
+        }
+        .submit-btn, .restart-btn {
+            display: block;
+            width: 220px;
+            margin: 30px auto;
+        }
+
+        /* Quiz and Results Styling */
+        .question {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.15em;
+        }
+        .question-exhibit {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px solid #dee2e6;
+        }
+        .answer-choice {
+            margin-bottom: 12px;
+            padding: 12px;
+            border-radius: 6px;
+            display: block;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            position: relative; /* For custom inputs */
+            padding-left: 40px; /* Space for custom inputs */
+        }
+        .result-explanation {
+            background-color: #e9ecef;
+            border-left: 5px solid #0d6efd;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .correct {
+            background-color: #d1e7dd;
+            border: 1px solid #a3cfbb;
+            font-weight: 600;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            border: 1px solid #f1aeb5;
+        }
+        .hidden {
+            display: none;
+        }
+        
+        /* --- Custom Checkbox and Radio Button Styles --- */
+        .answer-choice input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkmark {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .answer-choice:hover .checkmark {
+            background-color: #ccc;
+        }
+        .answer-choice input:checked ~ .checkmark {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .answer-choice input:checked ~ .checkmark:after {
+            display: block;
+        }
+        /* Style the checkmark/indicator for checkbox */
+        .answer-choice input[type="checkbox"] ~ .checkmark:after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+        /* Style the indicator for radio button */
+        .answer-choice input[type="radio"] ~ .checkmark {
+            border-radius: 50%;
+        }
+        .answer-choice input[type="radio"] ~ .checkmark:after {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CCNA Practice</h1>
+        
+        <div id="optionsPanel" class="options-panel">
+            <div class="option-group">
+                <label for="numQuestions">Questions:</label>
+                <input type="number" id="numQuestions" value="10" min="1">
+            </div>
+            <div class="option-group">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="all">All</option>
+                </select>
+            </div>
+             <div class="option-group-checkbox">
+                <label for="randomize">Randomize:</label>
+                <input type="checkbox" id="randomize" checked>
+            </div>
+            <button id="startBtn">Start Test</button>
+        </div>
+
+        <div id="quizContainer"></div>
+        <div id="resultsContainer"></div>
+    </div>
+
+    <script>
+    const startBtn = document.getElementById('startBtn');
+    const quizContainer = document.getElementById('quizContainer');
+    const resultsContainer = document.getElementById('resultsContainer');
+    const optionsPanel = document.getElementById('optionsPanel');
+    const difficultySelect = document.getElementById('difficulty');
+
+    let allQuestions = [];
+    let currentQuizQuestions = [];
+
+    // Fetch and process the questions as soon as the page loads.
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('questions.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                allQuestions = data;
+                populateDifficultyFilter();
+            })
+            .catch(error => {
+                console.error('Error fetching questions.json:', error);
+                quizContainer.innerHTML = `<p style="color: red; text-align: center;">Error: Could not load questions. Make sure 'questions.json' is in the same folder as this HTML file.</p>`;
+            });
+    });
+    
+    function populateDifficultyFilter() {
+        const difficulties = [...new Set(allQuestions.map(q => q.difficulty))];
+        difficulties.sort();
+        difficulties.forEach(diff => {
+            const option = document.createElement('option');
+            option.value = diff;
+            option.textContent = diff;
+            difficultySelect.appendChild(option);
+        });
+    }
+
+    startBtn.addEventListener('click', generateTest);
+
+    function generateTest() {
+        const numQuestionsInput = document.getElementById('numQuestions');
+        const difficulty = difficultySelect.value;
+        const randomize = document.getElementById('randomize').checked;
+
+        // 1. Filter questions by difficulty
+        let filteredQuestions = allQuestions;
+        if (difficulty !== 'all') {
+            filteredQuestions = allQuestions.filter(q => q.difficulty === difficulty);
+        }
+        
+        // Update max value of number input based on available questions
+        numQuestionsInput.max = filteredQuestions.length;
+        const numQuestions = Math.min(parseInt(numQuestionsInput.value), filteredQuestions.length);
+
+
+        // 2. Randomize if checked
+        if (randomize) {
+            // Create a shuffled copy
+            let shuffled = [...filteredQuestions].sort(() => Math.random() - 0.5);
+            currentQuizQuestions = shuffled.slice(0, numQuestions);
+        } else {
+            currentQuizQuestions = filteredQuestions.slice(0, numQuestions);
+        }
+        
+        // 4. Build and display the quiz HTML
+        displayQuiz();
+    }
+
+    function displayQuiz() {
+        optionsPanel.classList.add('hidden');
+        quizContainer.innerHTML = '';
+        resultsContainer.innerHTML = '';
+
+        let quizHtml = '<h2>Quiz</h2>';
+        currentQuizQuestions.forEach((q, index) => {
+            quizHtml += `<div class="question" id="q-${index}">`;
+            quizHtml += `<div class="question-text">${index + 1}. ${q.questionText}</div>`;
+
+            if (q.exhibits && q.exhibits.length > 0) {
+                q.exhibits.forEach(exhibit => {
+                    quizHtml += `<img src="${exhibit.ExhibitFileName}" alt="Exhibit for question ${index + 1}" class="question-exhibit">`;
+                });
+            }
+
+            const correctAnswersCount = q.answerChoices.filter(choice => choice.IsCorrect).length;
+            const inputType = correctAnswersCount > 1 ? 'checkbox' : 'radio';
+
+            q.answerChoices.forEach((choice, choiceIndex) => {
+                quizHtml += `
+                    <label class="answer-choice">
+                        ${choice.Text}
+                        <input type="${inputType}" name="question-${index}" value="${choiceIndex}">
+                        <span class="checkmark"></span>
+                    </label>
+                `;
+            });
+
+            quizHtml += `</div>`;
+        });
+
+        quizHtml += '<button id="submitBtn" class="submit-btn">Submit Test</button>';
+        quizContainer.innerHTML = quizHtml;
+        
+        document.getElementById('submitBtn').addEventListener('click', showResults);
+    }
+
+    function showResults() {
+        let score = 0;
+        
+        // Disable all inputs so answers can't be changed
+        const allInputs = quizContainer.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+        allInputs.forEach(input => input.disabled = true);
+        
+        currentQuizQuestions.forEach((q, index) => {
+            const questionElement = document.getElementById(`q-${index}`);
+            
+            const userChoices = Array.from(document.querySelectorAll(`input[name="question-${index}"]:checked`));
+            const userAnswers = userChoices.map(input => parseInt(input.value));
+            
+            const correctAnswers = q.answerChoices
+                .map((choice, i) => choice.IsCorrect ? i : -1)
+                .filter(i => i !== -1);
+
+            let isQuestionCorrect = false;
+            if (userAnswers.length === correctAnswers.length) {
+                isQuestionCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+            }
+
+            if (isQuestionCorrect) {
+                score++;
+            }
+
+            // Visually update the question with results
+            const labels = questionElement.querySelectorAll('.answer-choice');
+            labels.forEach((label, choiceIndex) => {
+                const isCorrectChoice = q.answerChoices[choiceIndex].IsCorrect;
+                const isUserChoice = userAnswers.includes(choiceIndex);
+                
+                if (isCorrectChoice) {
+                    label.classList.add('correct');
+                } else if (isUserChoice && !isCorrectChoice) {
+                    label.classList.add('incorrect');
+                }
+            });
+
+            const explanationHtml = `<div class="result-explanation"><strong>Explanation:</strong> ${q.explanation}</div>`;
+            questionElement.insertAdjacentHTML('beforeend', explanationHtml);
+        });
+        
+        quizContainer.removeChild(document.getElementById('submitBtn'));
+
+        resultsContainer.innerHTML = `<h2>Your Score: ${score} out of ${currentQuizQuestions.length} (${Math.round((score / currentQuizQuestions.length) * 100)}%)</h2>`;
+        resultsContainer.innerHTML += '<button id="restartBtn" class="restart-btn">Take Another Test</button>';
+        
+        document.getElementById('restartBtn').addEventListener('click', () => {
+             optionsPanel.classList.remove('hidden');
+             quizContainer.innerHTML = '';
+             resultsContainer.innerHTML = '';
+        });
+    }
+    </script>
+</body>
+</html>
