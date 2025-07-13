@@ -390,12 +390,7 @@
             let questionTextHtml = `${index + 1}. ${q.questionText}`;
             if (q.answerType === 'FB') {
                 const inputField = `<input type="text" class="fb-input" id="fb-input-${index}" autocomplete="off">`;
-                // --- FIX STARTS HERE ---
-                // Replace multiple possible placeholders to ensure the box is created.
-                questionTextHtml = questionTextHtml.replace('  ', inputField) // Double space
-                                                   .replace('?', inputField)   // Question mark
-                                                   .replace('___', inputField); // Underscores
-                // --- FIX ENDS HERE ---
+                questionTextHtml = questionTextHtml.replace('  ', inputField).replace('?', inputField).replace('___', inputField);
             }
             quizHtml += `<div class="question-text">${questionTextHtml}</div>`;
             
@@ -444,13 +439,22 @@
 
             if (q.answerType === 'FB') {
                 const userInput = questionElement.querySelector(`#fb-input-${index}`);
-                const userValue = userInput.value.trim().toLowerCase();
-                const correctAnswers = (q.blanks && q.blanks[0] || "").split(',').map(ans => ans.trim().toLowerCase());
-                if (correctAnswers.includes(userValue)) {
-                    isQuestionCorrect = true;
+                // --- FIX #1: Add a guard clause to prevent crash on unanswered/unrendered FB questions ---
+                if (userInput) {
+                    const userValue = userInput.value.trim().toLowerCase();
+                    
+                    // --- FIX #2: Handle case-insensitivity and multiple answers separated by commas ---
+                    const correctAnswers = (q.blanks && q.blanks[0] || "")
+                        .split(',')
+                        .map(ans => ans.trim().toLowerCase());
+
+                    if (correctAnswers.includes(userValue)) {
+                        isQuestionCorrect = true;
+                    }
+                    userInput.classList.add(isQuestionCorrect ? 'correct' : 'incorrect');
                 }
-                userInput.classList.add(isQuestionCorrect ? 'correct' : 'incorrect');
                 explanationText = `<strong>Correct Answer(s):</strong> ${q.blanks[0]}<br><br>${q.explanation}`;
+
             } else if ((q.answerType === 'MC' || q.answerType === 'MS') && q.answerChoices) {
                 const userChoices = Array.from(document.querySelectorAll(`input[name="question-${index}"]:checked`));
                 const userAnswers = userChoices.map(input => parseInt(input.value));
