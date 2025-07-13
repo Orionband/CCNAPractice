@@ -113,9 +113,8 @@
         }
         .question-exhibit-frame {
             width: 100%;
-            height: 350px; /* Default height for HTML exhibits */
+            height: 350px;
         }
-        /* Styling for text exhibits */
         .exhibit-container {
             margin: 15px 0;
             border: 1px solid #dee2e6;
@@ -269,11 +268,10 @@
             })
             .then(data => {
                 allQuestions = data;
-                // No longer need to populate difficulty filter
             })
             .catch(error => {
                 console.error('Error fetching questions.json:', error);
-                quizContainer.innerHTML = `<p style="color: red; text-align: center;">Error: Could not load questions. Make sure 'questions.json' and all exhibit files are in the same folder as this HTML file.</p>`;
+                quizContainer.innerHTML = `<p style="color: red; text-align: center;">Error: Could not load questions. Make sure 'questions.json' is in the same folder as this HTML file.</p>`;
             });
     });
 
@@ -283,7 +281,6 @@
         const numQuestionsInput = document.getElementById('numQuestions');
         const randomize = document.getElementById('randomize').checked;
         
-        // No longer need to filter by difficulty
         let selectedQuestions = allQuestions;
         
         numQuestionsInput.max = selectedQuestions.length;
@@ -296,6 +293,8 @@
             currentQuizQuestions = selectedQuestions.slice(0, numQuestions);
         }
         
+        // This part is ONLY for pre-fetching the LOCAL .txt files.
+        // Other exhibit types will be loaded directly by the browser.
         const textExhibitPromises = [];
         currentQuizQuestions.forEach(q => {
             if (q.exhibits) {
@@ -342,18 +341,24 @@
                 q.exhibits.forEach(exhibit => {
                     const fullUrl = exhibit.ExhibitFileName;
                     const filenameLower = fullUrl.toLowerCase();
-                    const localFileName = fullUrl.split('/').pop();
+                    
+                    // --- LOGIC FOR HYBRID (LOCAL & REMOTE) EXHIBITS ---
 
+                    // 1. For local .txt files, display the pre-fetched content.
                     if (filenameLower.endsWith('.txt')) {
                         quizHtml += `
                             <div class="exhibit-container">
-                                <strong>Exhibit: ${localFileName}</strong>
+                                <strong>Exhibit: ${exhibit.localFileName}</strong>
                                 <pre class="question-exhibit-text">${exhibit.textContent || ''}</pre>
                             </div>`;
+                    
+                    // 2. For remote .html files, embed using an iframe with the full URL.
                     } else if (filenameLower.endsWith('.html')) {
-                        quizHtml += `<iframe src="${localFileName}" class="question-exhibit-frame" title="Exhibit: ${localFileName}"></iframe>`;
+                        quizHtml += `<iframe src="${fullUrl}" class="question-exhibit-frame" title="Exhibit from ${fullUrl}"></iframe>`;
+                    
+                    // 3. For remote images, embed using an img tag with the full URL.
                     } else if (filenameLower.endsWith('.png') || filenameLower.endsWith('.jpg') || filenameLower.endsWith('.jpeg') || filenameLower.endsWith('.gif')) {
-                         quizHtml += `<img src="${localFileName}" alt="Exhibit: ${localFileName}" class="question-exhibit">`;
+                         quizHtml += `<img src="${fullUrl}" alt="Exhibit from ${fullUrl}" class="question-exhibit">`;
                     }
                 });
             }
