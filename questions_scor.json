@@ -1,7 +1,7 @@
 ﻿[
     {
         "questionId":  "67FC24EB-3CD4-49C0-9AA8-00EEC0599AB9",
-        "questionText":  "analysis tools, such as ?IDA Pro, BinText, UPX, and Ghidra, are concerned with the decompiling, reverse engineering, and analysis of malicious software.",
+        "questionText":  "  analysis tools, such as ?IDA Pro, BinText, UPX, and Ghidra, are concerned with the decompiling, reverse engineering, and analysis of malicious software.",
         "explanation":  "Static analysis tools, such as ?IDA Pro, BinText, UPX, and Ghidra, are concerned with the decompiling, reverse engineering, and analysis of malicious software.",
         "difficulty":  "1",
         "comments":  "",
@@ -705,7 +705,7 @@
     },
     {
         "questionId":  "7674F1C2-DE0C-4115-8E9E-7E937E28888A",
-        "questionText":  "analysis relates to the monitoring and analysis of computer activity and network traffic.",
+        "questionText":  "  analysis relates to the monitoring and analysis of computer activity and network traffic.",
         "explanation":  "Dynamic analysis relates to the monitoring and analysis of computer activity and network traffic. This requires the ability to configure the network device for monitoring, look for unusual or suspicious activity, and try not to alert attackers.",
         "difficulty":  "1",
         "comments":  "",
@@ -810,7 +810,7 @@
     },
     {
         "questionId":  "77BA7DEF-00A7-4B98-9720-94D8ACAF857B",
-        "questionText":  "\u0026nbsp;are software designed to install malware payloads on the victim?s system. They try to avoid detection and evade security controls by using several methods to spread and install the malware payload.",
+        "questionText":  "  are software designed to install malware payloads on the victim?s system. They try to avoid detection and evade security controls by using several methods to spread and install the malware payload.",
         "explanation":  "Droppers are software designed to install malware payloads on the victim\u0026rsquo;s system. Droppers try to avoid detection and evade security controls by using several methods to spread and install the malware payload.",
         "difficulty":  "1",
         "comments":  "",
@@ -943,7 +943,7 @@
     },
     {
         "questionId":  "0A46EF67-B4A9-4EA8-8938-C819DEF053F9",
-        "questionText":  "is an attack carried out when the attacker places himself in the communication path between two users.",
+        "questionText":  "  is an attack carried out when the attacker places himself in the communication path between two users.",
         "explanation":  "A on-path attack is carried out when the attacker places himself in the communication path between two users. Any time the attacker can do this, there is the possibility that he can intercept and modify communications.",
         "difficulty":  "1",
         "comments":  "",
@@ -1035,7 +1035,7 @@
     },
     {
         "questionId":  "74EC27C9-762E-442F-B033-D2AAAC321ECF",
-        "questionText":  "infection means that the virus takes its time in infecting other files or spreading its damage.",
+        "questionText":  "  infection means that the virus takes its time in infecting other files or spreading its damage.",
         "explanation":  "Some viruses limit the rate of infection. This type of activity is known as sparse infection. Sparse infection means that the virus takes its time in infecting other files or spreading its damage.",
         "difficulty":  "1",
         "comments":  "",
@@ -1387,7 +1387,7 @@
     },
     {
         "questionId":  "37150DB6-FF25-4E4B-9017-E9983987C950",
-        "questionText":  "A root certificate is used to identify the .",
+        "questionText":  "A root certificate is used to identify the  .",
         "explanation":  "A root certificate is used to identify the Certificate Authority (CA).",
         "difficulty":  "1",
         "comments":  "",
@@ -1542,7 +1542,7 @@
     },
     {
         "questionId":  "BF12F45D-1663-46CF-8E45-C12A5454947E",
-        "questionText":  "What does O stand for in the following: CN=Thor, OU=engineering, O=cisco.com",
+        "questionText":  "What does O stand for in the following: CN=Thor, OU=engineering, O=cisco.com  ",
         "explanation":  "CN stands for common name, OU stands for organizational unit, and O stands for organization.",
         "difficulty":  "1",
         "comments":  "",
@@ -1700,7 +1700,7 @@
     },
     {
         "questionId":  "1062FDE9-A2F3-4E9D-BB4A-FBD288E5168B",
-        "questionText":  "is a method used to verify data integrity.",
+        "questionText":  "  is a method used to verify data integrity.",
         "explanation":  "Hashing is a method used to verify data integrity. For example, you can verify the integrity of a downloaded software image file from Cisco, and then verify its integrity using a tool such as the verify md5 command in a Cisco IOS device or a checksum verification in an operating system such as Microsoft Windows, Linux, or Mac OS X.",
         "difficulty":  "1",
         "comments":  "",
@@ -1746,7 +1746,7 @@
     },
     {
         "questionId":  "4160E576-B9C1-4EC1-B2D9-FE928DD037DC",
-        "questionText":  "What does OU stand for in the following: CN=Thor, OU=engineering, O=cisco.com",
+        "questionText":  "What does OU stand for in the following: CN=Thor, OU=engineering, O=cisco.com  ",
         "explanation":  "CN stands for common name, OU stands for organizational unit, and O stands for organization.",
         "difficulty":  "1",
         "comments":  "",
@@ -2194,7 +2194,7 @@
     },
     {
         "questionId":  "D5AF6A07-C7A3-49B9-8C3D-3F8BA0334A15",
-        "questionText":  "What does CN stand for in the following: CN=Thor, OU=engineering, O=cisco.com",
+        "questionText":  "What does CN stand for in the following: CN=Thor, OU=engineering, O=cisco.com  ",
         "explanation":  "CN stands for common name, OU stands for organizational unit, and O stands for organization.",
         "difficulty":  "1",
         "comments":  "",
@@ -2211,7 +2211,7 @@
     },
     {
         "questionId":  "7650D653-C8B2-4D25-84D7-2EFB0C7C7712",
-        "questionText":  "A one-time pad (OTP) is a good example of a key that is only used once. Using this method, if we want to encrypt a 32-bit message, we use a 32-bit key, also called the , which is used one time only.",
+        "questionText":  "A one-time pad (OTP) is a good example of a key that is only used once. Using this method, if we want to encrypt a 32-bit message, we use a 32-bit key, also called the  , which is used one time only.",
         "explanation":  "A one-time pad (OTP) is a good example of a key that is only used once. Using this method, if we want to encrypt a 32-bit message, we use a 32-bit key, also called the pad, which is used one time only. Each bit from the pad is mathematically computed with a corresponding bit from our message, and the results are our cipher text, or encrypted content.",
         "difficulty":  "1",
         "comments":  "",
@@ -2501,7 +2501,7 @@
     },
     {
         "questionId":  "301E5D38-998F-4357-97DC-0000FD63427D",
-        "questionText":  "-segmentation is at the VM level or between containers regardless of a VLAN or a subnet.",
+        "questionText":  "  -segmentation is at the VM level or between containers regardless of a VLAN or a subnet.",
         "explanation":  "Micro-segmentation is at the VM level or between containers regardless of a VLAN or a subnet. Micro-segmentation needs to be \u0026ldquo;application aware.\u0026rdquo; This means that the segmentation process starts and ends with the application itself.",
         "difficulty":  "1",
         "comments":  "",
@@ -2547,7 +2547,7 @@
     },
     {
         "questionId":  "8F81B6FD-1EFB-4640-ABB0-164BE1B7AAED",
-        "questionText":  "Given that 10.1.1.1 is the IP address of the Cisco DNA Center, the https://10.1.1.1/api/system/v1/auth/ API call is used to get and encapsulate user identity and role information as a single value.",
+        "questionText":  "Given that 10.1.1.1 is the IP address of the Cisco DNA Center, the https://10.1.1.1/api/system/v1/auth/  API call is used to get and encapsulate user identity and role information as a single value.",
         "explanation":  "Given that 10.1.1.1 is the IP address of the Cisco DNA Center, the https://10.1.1.1/api/system/v1/auth/token API call is used to get and encapsulate user identity and role information as a single value.",
         "difficulty":  "1",
         "comments":  "",
@@ -2622,7 +2622,7 @@
     },
     {
         "questionId":  "F996948F-4647-4187-99F4-22CD9240745C",
-        "questionText":  "VXLAN uses an identifier or a tag that represents a logical segment that is called the .",
+        "questionText":  "VXLAN uses an identifier or a tag that represents a logical segment that is called the  .",
         "explanation":  "VXLAN uses an identifier or a tag that represents a logical segment that is called the VXLAN Network Identifier (VNID). The logical segment identified with the VNID is a Layer 2 broadcast domain that is tunneled over the VTEP tunnels.",
         "difficulty":  "1",
         "comments":  "",
@@ -2957,7 +2957,7 @@
     },
     {
         "questionId":  "250E152F-421E-433B-9B83-6BC993EF3426",
-        "questionText":  "The SDN controller has a global view of the , and it uses a common management protocol to configure the network infrastructure devices.",
+        "questionText":  "The SDN controller has a global view of the  , and it uses a common management protocol to configure the network infrastructure devices.",
         "explanation":  "The SDN controller has a global view of the network, and it uses a common management protocol to configure the network infrastructure devices.",
         "difficulty":  "1",
         "comments":  "",
@@ -3003,7 +3003,7 @@
     },
     {
         "questionId":  "D8CC00F9-346A-43DC-B70A-842A6C5270C0",
-        "questionText":  "All REST requests in Cisco DNA Center require .",
+        "questionText":  "All REST requests in Cisco DNA Center require  .",
         "explanation":  "All REST requests in Cisco DNA Center require authentication. The Authentication API generates a security token that encapsulates the privileges of an authenticated REST caller. All requested operations are authorized by Cisco DNA Center according to the access privileges associated with the security token that is sent in the request.",
         "difficulty":  "1",
         "comments":  "",
@@ -3153,7 +3153,7 @@
     },
     {
         "questionId":  "A8758A65-1873-49C0-8505-FBE173FCEBE1",
-        "questionText":  "Given that 10.1.1.1 is the IP address of the Cisco DNA Center, the https://10.1.1.1/api/v1/ API call is used to get the list of first 500 network devices sorted lexicographically based on hostname.",
+        "questionText":  "Given that 10.1.1.1 is the IP address of the Cisco DNA Center, the https://10.1.1.1/api/v1/  API call is used to get the list of first 500 network devices sorted lexicographically based on hostname.",
         "explanation":  "Given that 10.1.1.1 is the IP address of the Cisco DNA Center, the https://10.1.1.1/api/v1/network-device API call is used to get the list of first 500 network devices sorted lexicographically based on hostname.",
         "difficulty":  "1",
         "comments":  "",
@@ -3332,7 +3332,7 @@
     },
     {
         "questionId":  "3123FCD4-9BCA-4C7C-8E8F-C8CD8A65F4F2",
-        "questionText":  "In Cisco ACI, the IP address that represents the leaf VTEP is called the .",
+        "questionText":  "In Cisco ACI, the IP address that represents the leaf VTEP is called the  .",
         "explanation":  "In Cisco ACI, the IP address that represents the leaf VTEP is called the physical tunnel endpoint (PTEP). The leaf switches are responsible for routing or bridging tenant packets and for applying network policies.",
         "difficulty":  "1",
         "comments":  "",
@@ -3627,7 +3627,7 @@
     },
     {
         "questionId":  "54BD5F45-40BD-4C13-BDC3-E0DAF4225FE3",
-        "questionText":  "is used for delegated authorization, allowing a user to grant access to their resources on one service to another service. Typically used in REST API implementations.",
+        "questionText":  "  is used for delegated authorization, allowing a user to grant access to their resources on one service to another service. Typically used in REST API implementations.",
         "explanation":  "OAuth 2.0 is used for delegated authorization, allowing a user to grant access to their resources on one service to another service. Typically used in REST API implementations. OAuth 2.0 allows third-party applications to access resources on behalf of the user without sharing their credentials. It uses access tokens and refresh tokens to provide authorization.",
         "difficulty":  "1",
         "comments":  "",
@@ -3945,7 +3945,7 @@
     },
     {
         "questionId":  "AB8A1290-5868-4B50-B0EC-A50FC556BA86",
-        "questionText":  "The ?-trust? concept assumes that no system or user will be ?trusted? when requesting access to the corporate network, systems, and applications hosted on-premise or in the cloud.",
+        "questionText":  "The  -trust concept assumes that no system or user will be trusted when requesting access to the corporate network, systems, and applications hosted on-premise or in the cloud.",
         "explanation":  "The \u0026ldquo;zero-trust\u0026rdquo; concept assumes that no system or user will be \u0026ldquo;trusted\u0026rdquo; when requesting access to the corporate network, systems, and applications hosted on-premise or in the cloud. You must first verify their trustworthiness before granting access.",
         "difficulty":  "1",
         "comments":  "",
@@ -4096,7 +4096,7 @@
     },
     {
         "questionId":  "9C3700C8-B61F-4BB5-ACA0-9DCB617A08BE",
-        "questionText":  "Access Controls are defined by policy and cannot be modified by the information owner.",
+        "questionText":  "  Access Controls are defined by policy and cannot be modified by the information owner.",
         "explanation":  "Mandatory access controls (MACs) are defined by policy and cannot be modified by the information owner. MACs are primarily used in secure military and government systems that require a high degree of confidentiality. In a MAC environment, objects are assigned a security label that indicates the classification and category of the resource.",
         "difficulty":  "1",
         "comments":  "",
@@ -4221,7 +4221,7 @@
     },
     {
         "questionId":  "9FC448C4-6E61-4E5D-A5AE-8DE79A70C00B",
-        "questionText":  "Access Controls are defined by the owner of the object.",
+        "questionText":  "  Access Controls are defined by the owner of the object.",
         "explanation":  "Discretionary access controls (DACs) are defined by the owner of the object. DACs are used in commercial operating systems.",
         "difficulty":  "1",
         "comments":  "",
@@ -4238,7 +4238,7 @@
     },
     {
         "questionId":  "25EC5D67-3168-443F-B886-890BCE06B3A7",
-        "questionText":  "is used for authentication, allowing users to log in to multiple systems with a single set of credentials.",
+        "questionText":  "  is used for authentication, allowing users to log in to multiple systems with a single set of credentials.",
         "explanation":  "OpenID Connect (OIDC) is used for authentication, allowing users to log in to multiple systems with a single set of credentials. OIDC builds on top of OAuth 2.0 to provide authentication and identity information to the service provider. It uses JSON Web Tokens (JWTs) to represent identity information.",
         "difficulty":  "1",
         "comments":  "\u003cp\u003e9/13/24 - adj for accuracy\u003c/p\u003e\n\n\u003cp\u003e8/2/24 - adj for accuracy\u003c/p\u003e\n",
@@ -4589,7 +4589,7 @@
     },
     {
         "questionId":  "5AF63A79-7DFA-4EAF-B62B-5824A9302E6F",
-        "questionText":  "Cisco ISE can be deployed in , standalone, or high availability in standalone-mode.",
+        "questionText":  "Cisco ISE can be deployed in  , standalone, or high availability in standalone-mode.",
         "explanation":  "Cisco ISE can be deployed in distributed, standalone, or high availability in standalone-mode.",
         "difficulty":  "1",
         "comments":  "",
@@ -4652,7 +4652,7 @@
     },
     {
         "questionId":  "A03324AF-10B4-4C3F-8F8C-47E6DC90631B",
-        "questionText":  "TACACS+ uses TCP as the transport protocol, and the TACACS+ server listens on port .",
+        "questionText":  "TACACS+ uses TCP as the transport protocol, and the TACACS+ server listens on port  .",
         "explanation":  "TACACS+ uses TCP as the transport protocol, and the TACACS+ server listens on port 49.",
         "difficulty":  "1",
         "comments":  "",
@@ -4698,7 +4698,7 @@
     },
     {
         "questionId":  "A8D9D259-4EFF-4084-B6CF-3EA8A5ED12FC",
-        "questionText":  "is used for single sign-on (SSO) between multiple applications or systems.",
+        "questionText":  "  is used for single sign-on (SSO) between multiple applications or systems.",
         "explanation":  "SAML is used for single sign-on (SSO) between multiple applications or systems. SAML uses XML for data exchange and focuses on user authentication and authorization. It requires pre-established trust between identity providers (IdPs) and service providers (SPs).",
         "difficulty":  "1",
         "comments":  "",
@@ -4802,7 +4802,7 @@
     },
     {
         "questionId":  "EDC71867-3A5D-4B28-B138-2A7618A72DD3",
-        "questionText":  "The authentication and authorization phase of RADIUS consist of two messages: ACCESS- and either ACCESS-ACCEPT, ACCESS-REJECT, or ACCESS-CHALLENGE.",
+        "questionText":  "The authentication and authorization phase of RADIUS consist of two messages: ACCESS-  and either ACCESS-ACCEPT, ACCESS-REJECT, or ACCESS-CHALLENGE.",
         "explanation":  "The authentication and authorization phase of RADIUS consist of two messages: ACCESS-REQUEST and either ACCESS-ACCEPT, ACCESS-REJECT, or ACCESS-CHALLENGE. The access server sends an ACCESS-REQUEST to the RADIUS server that includes the user identity, the password, and other information about the requestor of the access (for example, the IP address).",
         "difficulty":  "1",
         "comments":  "",
@@ -4906,7 +4906,7 @@
     },
     {
         "questionId":  "472617FC-A95A-4DD4-BDF8-0E351312929E",
-        "questionText":  "The 802.1x port-based access control includes four phases: Session initiation, Session authentication, Session authorization, and Session .",
+        "questionText":  "The 802.1x port-based access control includes four phases: Session initiation, Session authentication, Session authorization, and Session  .",
         "explanation":  "The 802.1x port-based access control includes four phases: Session initiation, Session authentication, Session authorization, and Session accounting. Session accounting represents the exchange of accounting RADIUS packets between the authenticator and the authentication server.",
         "difficulty":  "1",
         "comments":  "",
@@ -5119,7 +5119,7 @@
     },
     {
         "questionId":  "71AFFCD1-F21E-4FC4-B2A2-61AC8D10C047",
-        "questionText":  "Threat \u0026nbsp;is the concept of ?proactively? or ?actively? searching for advanced threats that may evade your security products and capabilities.",
+        "questionText":  "Threat  is the concept of proactively or actively searching for advanced threats that may evade your security products and capabilities.",
         "explanation":  "Threat hunting is the concept of \u0026ldquo;proactively\u0026rdquo; or \u0026ldquo;actively\u0026rdquo; searching for advanced threats that may evade your security products and capabilities.",
         "difficulty":  "1",
         "comments":  "",
@@ -5465,7 +5465,7 @@
     },
     {
         "questionId":  "9FAA9F6D-D930-4C1F-BC24-94B7E4AAAF56",
-        "questionText":  "Microsoft?s Azure equivalent of NetFlow is called in  flow logs.",
+        "questionText":  "Microsoft's Azure equivalent of NetFlow is called in  flow logs.",
         "explanation":  "Microsoft\u0026rsquo;s Azure equivalent of NetFlow is called Network Security Group (NSG) Flow Logs.",
         "difficulty":  "1",
         "comments":  "",
@@ -5741,7 +5741,7 @@
     },
     {
         "questionId":  "9A28E92E-FFF6-45CD-AB92-E5A079EE6D52",
-        "questionText":  "is a cloud-based Cisco solution that uses machine learning and statistical modeling of networks.",
+        "questionText":  "  is a cloud-based Cisco solution that uses machine learning and statistical modeling of networks.",
         "explanation":  "Cisco Cognitive Threat Analytics (CTA) is a cloud-based Cisco solution that uses machine learning and statistical modeling of networks. Cisco CTA creates a baseline of the traffic in your network and identifies anomalies. Cisco CTA can also analyze user and device behavior, as well as web traffic to uncover malicious command-and-control communications and data exfiltration.",
         "difficulty":  "1",
         "comments":  "",
@@ -5949,7 +5949,7 @@
     },
     {
         "questionId":  "BD489D4C-DD0A-47C8-85A0-A79F6A9D78CD",
-        "questionText":  "Complete the following command to implement BPDU Guard:\r\nSW2(config-if)# spanning-tree bpduguard",
+        "questionText":  "Complete the following command to implement BPDU Guard:\r\nSW2(config-if)# spanning-tree bpduguard  ",
         "explanation":  "The following command implements BPDU Guard:\n\n\tSW2(config-if)# spanning-tree bpduguard enable",
         "difficulty":  "1",
         "comments":  "",
@@ -6087,7 +6087,7 @@
     },
     {
         "questionId":  "7397C05C-2D95-498C-8163-B413A6D3FC12",
-        "questionText":  "is a data modeling language that is used in NETCONF to describe the configuration and operational state of network devices.",
+        "questionText":  "  is a data modeling language that is used in NETCONF to describe the configuration and operational state of network devices.",
         "explanation":  "YANG is a data modeling language that is used in NETCONF to describe the configuration and operational state of network devices. YANG is a formalized language with a standardized syntax, which allows for the creation of a clear and comprehensive description of network elements and their relationships.\n\nIn YANG, data models are defined as modules that contain a set of statements that describe the structure, data types, and constraints of the data. These modules can be used to represent network topologies, network services, network policies, and other network-related information.",
         "difficulty":  "1",
         "comments":  "",
@@ -7283,7 +7283,7 @@
     },
     {
         "questionId":  "402B2C3E-6ED4-4F21-B510-67FFFD9C0508",
-        "questionText":  "lets you group multiple Cisco FTD units together as a single logical device.",
+        "questionText":  "  lets you group multiple Cisco FTD units together as a single logical device.",
         "explanation":  "Clustering lets you group multiple Cisco FTD units together as a single logical device. Clustering is supported on the Cisco Firepower 9300 and the Cisco Firepower 4100 series.",
         "difficulty":  "1",
         "comments":  "",
@@ -7833,7 +7833,7 @@
     },
     {
         "questionId":  "2ED15C99-B45C-4C95-97DB-E6AF6891E17B",
-        "questionText":  "FirePOWER Services running on the Cisco ASA 5506-X, 5508-X, and 5516-X can be managed using .",
+        "questionText":  "FirePOWER Services running on the Cisco ASA 5506-X, 5508-X, and 5516-X can be managed using  .",
         "explanation":  "FirePOWER Services running on the Cisco ASA 5506-X, 5508-X, and 5516-X can be managed using Adaptive Security Device Manager (ASDM), and the licenses can be installed using ASDM.",
         "difficulty":  "1",
         "comments":  "",
@@ -8509,7 +8509,7 @@
     },
     {
         "questionId":  "E554E8FE-9B08-4BBF-96D6-9B56C2501345",
-        "questionText":  "Fill in the missing command to create an ISAKMP policy for IKEv1 Phase 1:\r\n isakmp policy 10\r\n\u0026nbsp;hash sha\r\n\u0026nbsp;authentication pre-share",
+        "questionText":  "Fill in the missing command to create an ISAKMP policy for IKEv1 Phase 1:\r\n  isakmp policy 10\r\n\u0026nbsp;hash sha\r\n\u0026nbsp;authentication pre-share",
         "explanation":  "The following command creates an ISAKMP policy for IKEv1 Phase 1:\n\n\tcrypto isakmp policy 10\n\n\t\u0026nbsp;hash sha\n\n\t\u0026nbsp;authentication pre-share",
         "difficulty":  "1",
         "comments":  "",
@@ -8753,7 +8753,7 @@
     },
     {
         "questionId":  "C6C1BFDA-AAE5-4272-A50D-7BDFACA41D4A",
-        "questionText":  "When you configure dynamic interfaces (IPsec tunnel or GRE over IPsec) the tunnel interface is in a -only mode.",
+        "questionText":  "When you configure dynamic interfaces (IPsec tunnel or GRE over IPsec) the tunnel interface is in a  -only mode.",
         "explanation":  "When you configure dynamic interfaces (IPsec tunnel or GRE over IPsec) the tunnel interface is in a responder-only mode. In the case of IKEv2 implementations, the tunnel negotiation triggers the cloning of a virtual-template into a virtual-access interface (interface Virtual-Access number) that represents the point-to-point link to the remote peer that is protected by IPsec.",
         "difficulty":  "1",
         "comments":  "",
@@ -9375,7 +9375,7 @@
     },
     {
         "questionId":  "A1C2057C-E27A-40EB-BE26-24BF0DFA4DC1",
-        "questionText":  "The ability to enforce network segmentation in container and VM environments is what people call -segmentation.",
+        "questionText":  "The ability to enforce network segmentation in container and VM environments is what people call  -segmentation.",
         "explanation":  "The ability to enforce network segmentation in container and VM environments is what people call micro-segmentation. Micro-segmentation is at the VM level or between containers, regardless of a VLAN or a subnet. Micro-segmentation needs to be \u0026ldquo;application aware.\u0026rdquo; This means that the segmentation process starts and ends with the application itself.",
         "difficulty":  "1",
         "comments":  "",
@@ -9392,7 +9392,7 @@
     },
     {
         "questionId":  "1A28C484-7F5E-4049-88BD-132425D46C8D",
-        "questionText":  "Attack surface management typically involves , which involves identifying and cataloging all digital assets, including hardware, software, cloud services, and data repositories, within an organization?s infrastructure.",
+        "questionText":  "Attack surface management typically involves  , which involves identifying and cataloging all digital assets, including hardware, software, cloud services, and data repositories, within an organization?s infrastructure.",
         "explanation":  "Attack Surface Management typically involves the following activities:\n\nInventory and asset discovery: Identifying and cataloging all digital assets, including hardware, software, cloud services, and data repositories, within an organization\u0026rsquo;s infrastructure.\n\nVulnerability scanning and assessment: Conducting systematic scans and assessments to identify known vulnerabilities, misconfigurations, and security weaknesses across the digital assets.\n\nRisk analysis and prioritization: Analyzing the identified vulnerabilities and assessing their potential impact and likelihood of exploitation. Prioritizing vulnerabilities based on their criticality and the potential business impact they pose.\n\nThreat intelligence integration: Incorporating threat intelligence data to understand the latest attack vectors, emerging threats, and indicators of compromise relevant to the organization\u0026rsquo;s attack surface.\n\nPatch and remediation management: Implementing patching processes and security updates to address identified vulnerabilities and minimize the attack surface.\n\nContinuous monitoring and threat hunting: Deploying monitoring solutions to actively track and detect potential threats and anomalous activities within the attack surface. Conducting proactive threat hunting to uncover hidden vulnerabilities or ongoing attacks.\n\nIncident Response and Recovery: Developing incident response plans and protocols to effectively respond to and recover from security incidents within the attack surface.",
         "difficulty":  "1",
         "comments":  "",
@@ -9615,7 +9615,7 @@
     },
     {
         "questionId":  "B7EC8C1A-9326-4490-A771-3458BBB122EB",
-        "questionText":  "utilizes different techniques to establish multiple layers of security, effectively safeguarding against different types of attacks. It constantly monitors your security environment to identify any malicious files or URLs that might have evaded detection.",
+        "questionText":  "  utilizes different techniques to establish multiple layers of security, effectively safeguarding against different types of attacks. It constantly monitors your security environment to identify any malicious files or URLs that might have evaded detection.",
         "explanation":  "Cisco Secure Email utilizes different techniques to establish multiple layers of security, effectively safeguarding against different types of attacks. It constantly monitors your security environment to identify any malicious files or URLs that might have evaded detection. These security measures include:\n\nGeolocation-based filtering: This feature swiftly controls email content based on the sender\u0026rsquo;s location, providing protection against sophisticated spear phishing attempts.\n\nCisco Context Adaptive Scanning Engine (CASE): With CASE, the system achieves a spam capture rate exceeding 99 percent and an exceptionally low false-positive rate of less than one in one million.\n\nAdvanced outbreak filters: These filters conduct thorough inspections of URLs, continuously analyzing them in real time. They promptly block websites that exhibit a shift from benign to malicious behavior.\n\nCisco Secure Email Malware Defense: This feature ensures continuous protection against URL-based threats by subjecting potentially malicious links to real-time analysis.\n\nLeveraging Talos monitoring and Cisco Threat Grid intelligence: Malware Defense utilizes real-time monitoring and analytics from Talos and Threat Grid to identify previously unknown threats and sudden changes in file behavior.\n\nRemediation and visibility: Malware Defense takes proactive steps to remediate issues by automatically triggering dynamic reputation analysis. It provides visibility into the origin of malware, the impacted systems, and the activities carried out by the malware. Based on these insights, Malware Defense prioritizes remediation and takes appropriate action on both inbound and outbound email traffic.",
         "difficulty":  "1",
         "comments":  "",
@@ -9649,7 +9649,7 @@
     },
     {
         "questionId":  "D799BDEA-C38D-4421-9638-2DA579F9DCF9",
-        "questionText":  "filters conduct thorough inspections of URLs, continuously analyzing them in real time. They promptly block websites that exhibit a shift from benign to malicious behavior.",
+        "questionText":  "  filters conduct thorough inspections of URLs, continuously analyzing them in real time. They promptly block websites that exhibit a shift from benign to malicious behavior.",
         "explanation":  "Cisco Secure Email utilizes different techniques to establish multiple layers of security, effectively safeguarding against different types of attacks. It constantly monitors your security environment to identify any malicious files or URLs that might have evaded detection. These security measures include:\n\nGeolocation-based filtering: This feature swiftly controls email content based on the sender\u0026rsquo;s location, providing protection against sophisticated spear phishing attempts.\n\nCisco Context Adaptive Scanning Engine (CASE): With CASE, the system achieves a spam capture rate exceeding 99 percent and an exceptionally low false-positive rate of less than one in one million.\n\nAdvanced outbreak filters: These filters conduct thorough inspections of URLs, continuously analyzing them in real time. They promptly block websites that exhibit a shift from benign to malicious behavior.\n\nCisco Secure Email Malware Defense: This feature ensures continuous protection against URL-based threats by subjecting potentially malicious links to real-time analysis.\n\nLeveraging Talos monitoring and Cisco Threat Grid intelligence: Malware Defense utilizes real-time monitoring and analytics from Talos and Threat Grid to identify previously unknown threats and sudden changes in file behavior.\n\nRemediation and visibility: Malware Defense takes proactive steps to remediate issues by automatically triggering dynamic reputation analysis. It provides visibility into the origin of malware, the impacted systems, and the activities carried out by the malware. Based on these insights, Malware Defense prioritizes remediation and takes appropriate action on both inbound and outbound email traffic.",
         "difficulty":  "1",
         "comments":  "",
@@ -10049,7 +10049,7 @@
     },
     {
         "questionId":  "C2308E17-9DEC-4999-A27C-8AB7D564E5E9",
-        "questionText":  "Attack surface management typically involves , which involves incorporating threat intelligence data to understand the latest attack vectors, emerging threats, and indicators of compromise relevant to the organization?s attack surface.",
+        "questionText":  "Attack surface management typically involves  , which involves incorporating threat intelligence data to understand the latest attack vectors, emerging threats, and indicators of compromise relevant to the organization?s attack surface.",
         "explanation":  "Attack surface management typically involves the following activities:\n\nInventory and asset discovery: Identifying and cataloging all digital assets, including hardware, software, cloud services, and data repositories, within an organization\u0026rsquo;s infrastructure.\n\nVulnerability scanning and assessment: Conducting systematic scans and assessments to identify known vulnerabilities, misconfigurations, and security weaknesses across the digital assets.\n\nRisk analysis and prioritization: Analyzing the identified vulnerabilities and assessing their potential impact and likelihood of exploitation. Prioritizing vulnerabilities based on their criticality and the potential business impact they pose.\n\nThreat intelligence integration: Incorporating threat intelligence data to understand the latest attack vectors, emerging threats, and indicators of compromise relevant to the organization\u0026rsquo;s attack surface.\n\nPatch and remediation management: Implementing patching processes and security updates to address identified vulnerabilities and minimize the attack surface.\n\nContinuous monitoring and threat hunting: Deploying monitoring solutions to actively track and detect potential threats and anomalous activities within the attack surface. Conducting proactive threat hunting to uncover hidden vulnerabilities or ongoing attacks.\n\nIncident response and recovery: Developing incident response plans and protocols to effectively respond to and recover from security incidents within the attack surface.",
         "difficulty":  "1",
         "comments":  "\u003cp\u003e3/18 - checking w/ Tech Support\u003c/p\u003e\n",
@@ -10284,7 +10284,7 @@
     },
     {
         "questionId":  "9341987B-1F25-4074-908F-AA43CA72073D",
-        "questionText":  "is a feature of Cisco Secure Email that swiftly controls email content based on the sender?s location, providing protection against sophisticated spear phishing attempts.",
+        "questionText":  "  is a feature of Cisco Secure Email that swiftly controls email content based on the sender?s location, providing protection against sophisticated spear phishing attempts.",
         "explanation":  "Cisco Secure Email utilizes different techniques to establish multiple layers of security, effectively safeguarding against different types of attacks. It constantly monitors your security environment to identify any malicious files or URLs that might have evaded detection. These security measures include:\n\nGeolocation-based filtering: This feature swiftly controls email content based on the sender\u0026rsquo;s location, providing protection against sophisticated spear phishing attempts.\n\nCisco Context Adaptive Scanning Engine (CASE): With CASE, the system achieves a spam capture rate exceeding 99 percent and an exceptionally low false-positive rate of less than one in one million.\n\nAdvanced outbreak filters: These filters conduct thorough inspections of URLs, continuously analyzing them in real time. They promptly block websites that exhibit a shift from benign to malicious behavior.\n\nCisco Secure Email Malware Defense: This feature ensures continuous protection against URL-based threats by subjecting potentially malicious links to real-time analysis.\n\nLeveraging Talos monitoring and Cisco Threat Grid intelligence: Malware Defense utilizes real-time monitoring and analytics from Talos and Threat Grid to identify previously unknown threats and sudden changes in file behavior.\n\nRemediation and visibility: Malware Defense takes proactive steps to remediate issues by automatically triggering dynamic reputation analysis. It provides visibility into the origin of malware, the impacted systems, and the activities carried out by the malware. Based on these insights, Malware Defense prioritizes remediation and takes appropriate action on both inbound and outbound email traffic.",
         "difficulty":  "1",
         "comments":  "",
@@ -10330,7 +10330,7 @@
     },
     {
         "questionId":  "6375A4B9-4180-49A9-BB94-C07EAD55FE48",
-        "questionText":  "Attack surface management typically involves , which analyzes the identified vulnerabilities, assesses their potential impact and likelihood of exploitation, and prioritizes vulnerabilities based on their criticality and the potential business impact they pose.",
+        "questionText":  "Attack surface management typically involves  , which analyzes the identified vulnerabilities, assesses their potential impact and likelihood of exploitation, and prioritizes vulnerabilities based on their criticality and the potential business impact they pose.",
         "explanation":  "Attack Surface Management typically involves the following activities:\n\nInventory and asset discovery: Identifying and cataloging all digital assets, including hardware, software, cloud services, and data repositories, within an organization\u0026rsquo;s infrastructure.\n\nVulnerability scanning and assessment: Conducting systematic scans and assessments to identify known vulnerabilities, misconfigurations, and security weaknesses across the digital assets.\n\nRisk analysis and prioritization: Analyzing the identified vulnerabilities and assessing their potential impact and likelihood of exploitation. Prioritizing vulnerabilities based on their criticality and the potential business impact they pose.\n\nThreat intelligence integration: Incorporating threat intelligence data to understand the latest attack vectors, emerging threats, and indicators of compromise relevant to the organization\u0026rsquo;s attack surface.\n\nPatch and remediation management: Implementing patching processes and security updates to address identified vulnerabilities and minimize the attack surface.\n\nContinuous monitoring and threat hunting: Deploying monitoring solutions to actively track and detect potential threats and anomalous activities within the attack surface. Conducting proactive threat hunting to uncover hidden vulnerabilities or ongoing attacks.\n\nIncident response and recovery: Developing incident response plans and protocols to effectively respond to and recover from security incidents within the attack surface.",
         "difficulty":  "1",
         "comments":  "",
@@ -10376,7 +10376,7 @@
     },
     {
         "questionId":  "0050FE27-6490-440E-8091-C9A7A65822B1",
-        "questionText":  "Attack surface management typically involves , which includes implementing patching processes and security updates to address identified vulnerabilities and minimize the attack surface.",
+        "questionText":  "Attack surface management typically involves  , which includes implementing patching processes and security updates to address identified vulnerabilities and minimize the attack surface.",
         "explanation":  "Attack Surface Management typically involves the following activities:\n\nInventory and asset discovery: Identifying and cataloging all digital assets, including hardware, software, cloud services, and data repositories, within an organization\u0026rsquo;s infrastructure.\n\nVulnerability scanning and assessment: Conducting systematic scans and assessments to identify known vulnerabilities, misconfigurations, and security weaknesses across the digital assets.\n\nRisk analysis and prioritization: Analyzing the identified vulnerabilities and assessing their potential impact and likelihood of exploitation. Prioritizing vulnerabilities based on their criticality and the potential business impact they pose.\n\nThreat intelligence integration: Incorporating threat intelligence data to understand the latest attack vectors, emerging threats, and indicators of compromise relevant to the organization\u0026rsquo;s attack surface.\n\nPatch and remediation management: Implementing patching processes and security updates to address identified vulnerabilities and minimize the attack surface.\n\nContinuous monitoring and threat hunting: Deploying monitoring solutions to actively track and detect potential threats and anomalous activities within the attack surface. Conducting proactive threat hunting to uncover hidden vulnerabilities or ongoing attacks.\n\nIncident response and recovery: Developing incident response plans and protocols to effectively respond to and recover from security incidents within the attack surface.",
         "difficulty":  "1",
         "comments":  "",
@@ -10749,7 +10749,7 @@
     },
     {
         "questionId":  "F8662742-D38B-4FE5-956A-E40263C9A4A4",
-        "questionText":  "You can advertise and configure clients with PAC settings by using the Web Proxy Auto- protocol",
+        "questionText":  "You can advertise and configure clients with PAC settings by using the Web Proxy Auto-  protocol",
         "explanation":  "You can advertise and configure clients with PAC settings by using the Web Proxy Auto-Discovery (WPAD) protocol. WPAD uses the auto-detect proxy settings found in every modern web browser.",
         "difficulty":  "1",
         "comments":  "",
@@ -11507,7 +11507,7 @@
     },
     {
         "questionId":  "5FC47F1C-2AE5-4279-95D6-27991EE51F1C",
-        "questionText":  "The recipient access table (RAT) is a Cisco Secure Email terminology that defines which recipients are accepted by a public .",
+        "questionText":  "The recipient access table (RAT) is a Cisco Secure Email terminology that defines which recipients are accepted by a public  .",
         "explanation":  "The recipient access table (RAT), not to be confused with remote access trojan (also RAT), is a Cisco Secure Email terminology that defines which recipients are accepted by a public listener. At a minimum, RAT stipulates the listener address and whether to accept or reject it. For instance, a Cisco Secure Email might accept mail from secretcorp.com or secretcorp.org.",
         "difficulty":  "1",
         "comments":  "",
@@ -11838,7 +11838,7 @@
     },
     {
         "questionId":  "05DB4132-C8DB-42B7-9C79-4713C6D6B854",
-        "questionText":  "An Cisco Secure Endpoint policy is applied to an endpoint via .",
+        "questionText":  "An Cisco Secure Endpoint policy is applied to an endpoint via  .",
         "explanation":  "A policy is applied to an endpoint via Groups. Groups allow the computers in an organization to be managed according to their function, location, or other criteria that is determined by the administrator.",
         "difficulty":  "1",
         "comments":  "",
@@ -12347,7 +12347,7 @@
     },
     {
         "questionId":  "7B6479DF-8E83-479E-90AC-E4309F2C0306",
-        "questionText":  "The default Cisco Secure Endpoint setting is to leave TETRA , because it changes the nature of the AMP connector from being a very lightweight agent to being a ?thicker? software client that consumes more disk space for signature storage and more bandwidth for signature updates.",
+        "questionText":  "The default Cisco Secure Endpoint setting is to leave TETRA  , because it changes the nature of the AMP connector from being a very lightweight agent to being a ?thicker? software client that consumes more disk space for signature storage and more bandwidth for signature updates.",
         "explanation":  "The default Cisco Secure Endpoint setting is to leave TETRA disabled, because it changes the nature of the Cisco Secure Endpoint connector from being a very lightweight agent to being a \u0026ldquo;thicker\u0026rdquo; software client that consumes more disk space for signature storage and more bandwidth for signature updates.",
         "difficulty":  "1",
         "comments":  "",
