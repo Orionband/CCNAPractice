@@ -55,7 +55,7 @@
             font-size: 0.9em;
             color: #495057;
         }
-        .option-group input[type="number"], .option-group select {
+        .option-group input[type="number"] {
             padding: 10px;
             border-radius: 6px;
             border: 1px solid #ced4da;
@@ -104,12 +104,16 @@
             margin-bottom: 20px;
             font-size: 1.15em;
         }
-        .question-exhibit {
+        .question-exhibit, .question-exhibit-frame {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             margin: 15px 0;
             border: 1px solid #dee2e6;
+        }
+        .question-exhibit-frame {
+            width: 100%;
+            height: 350px; /* Default height for HTML exhibits */
         }
         /* Styling for text exhibits */
         .exhibit-container {
@@ -129,8 +133,8 @@
         }
         .question-exhibit-text {
             padding: 15px;
-            white-space: pre-wrap; /* Ensures long lines wrap */
-            word-wrap: break-word; /* Breaks long words if necessary */
+            white-space: pre-wrap;
+            word-wrap: break-word;
             font-family: "Courier New", Courier, monospace;
             font-size: 0.9em;
             margin: 0;
@@ -145,8 +149,8 @@
             display: block;
             cursor: pointer;
             transition: background-color 0.2s;
-            position: relative; /* For custom inputs */
-            padding-left: 40px; /* Space for custom inputs */
+            position: relative;
+            padding-left: 40px;
         }
         .result-explanation {
             background-color: #e9ecef;
@@ -168,7 +172,7 @@
             display: none;
         }
         
-        /* --- Custom Checkbox and Radio Button Styles --- */
+        /* Custom Checkbox and Radio Button Styles */
         .answer-choice input {
             position: absolute;
             opacity: 0;
@@ -202,7 +206,6 @@
         .answer-choice input:checked ~ .checkmark:after {
             display: block;
         }
-        /* Style the checkmark/indicator for checkbox */
         .answer-choice input[type="checkbox"] ~ .checkmark:after {
             left: 6px;
             top: 2px;
@@ -212,7 +215,6 @@
             border-width: 0 3px 3px 0;
             transform: rotate(45deg);
         }
-        /* Style the indicator for radio button */
         .answer-choice input[type="radio"] ~ .checkmark {
             border-radius: 50%;
         }
@@ -237,12 +239,6 @@
                 <label for="numQuestions">Questions:</label>
                 <input type="number" id="numQuestions" value="10" min="1">
             </div>
-            <div class="option-group">
-                <label for="difficulty">Difficulty:</label>
-                <select id="difficulty">
-                    <option value="all">All</option>
-                </select>
-            </div>
              <div class="option-group-checkbox">
                 <label for="randomize">Randomize:</label>
                 <input type="checkbox" id="randomize" checked>
@@ -259,7 +255,6 @@
     const quizContainer = document.getElementById('quizContainer');
     const resultsContainer = document.getElementById('resultsContainer');
     const optionsPanel = document.getElementById('optionsPanel');
-    const difficultySelect = document.getElementById('difficulty');
 
     let allQuestions = [];
     let currentQuizQuestions = [];
@@ -274,65 +269,42 @@
             })
             .then(data => {
                 allQuestions = data;
-                populateDifficultyFilter();
+                // No longer need to populate difficulty filter
             })
             .catch(error => {
                 console.error('Error fetching questions.json:', error);
-                quizContainer.innerHTML = `<p style="color: red; text-align: center;">Error: Could not load questions. Make sure 'questions.json' is in the same folder as this HTML file.</p>`;
+                quizContainer.innerHTML = `<p style="color: red; text-align: center;">Error: Could not load questions. Make sure 'questions.json' and all exhibit files are in the same folder as this HTML file.</p>`;
             });
     });
-    
-    function populateDifficultyFilter() {
-        const difficulties = [...new Set(allQuestions.map(q => q.difficulty))];
-        difficulties.sort();
-        difficulties.forEach(diff => {
-            const option = document.createElement('option');
-            option.value = diff;
-            option.textContent = diff;
-            difficultySelect.appendChild(option);
-        });
-    }
 
     startBtn.addEventListener('click', loadAndDisplayQuiz);
 
     async function loadAndDisplayQuiz() {
-        // 1. Select and filter questions
         const numQuestionsInput = document.getElementById('numQuestions');
-        const difficulty = difficultySelect.value;
         const randomize = document.getElementById('randomize').checked;
-
-        let filteredQuestions = allQuestions;
-        if (difficulty !== 'all') {
-            filteredQuestions = allQuestions.filter(q => q.difficulty === difficulty);
-        }
         
-        numQuestionsInput.max = filteredQuestions.length;
-        const numQuestions = Math.min(parseInt(numQuestionsInput.value), filteredQuestions.length);
+        // No longer need to filter by difficulty
+        let selectedQuestions = allQuestions;
+        
+        numQuestionsInput.max = selectedQuestions.length;
+        const numQuestions = Math.min(parseInt(numQuestionsInput.value), selectedQuestions.length);
 
         if (randomize) {
-            let shuffled = [...filteredQuestions].sort(() => Math.random() - 0.5);
+            let shuffled = [...selectedQuestions].sort(() => Math.random() - 0.5);
             currentQuizQuestions = shuffled.slice(0, numQuestions);
         } else {
-            currentQuizQuestions = filteredQuestions.slice(0, numQuestions);
+            currentQuizQuestions = selectedQuestions.slice(0, numQuestions);
         }
         
-        // 2. Fetch content for any .txt exhibits before displaying the quiz
         const textExhibitPromises = [];
         currentQuizQuestions.forEach(q => {
             if (q.exhibits) {
                 q.exhibits.forEach(exhibit => {
                     const fullUrl = exhibit.ExhibitFileName;
                     if (fullUrl.toLowerCase().endsWith('.txt')) {
-                        
-                        // --- FIX STARTS HERE ---
-                        // Extract the local filename from the full URL.
-                        // e.g., "https://.../somefile.txt" becomes "somefile.txt"
                         const localFileName = fullUrl.split('/').pop();
-                        
-                        // Store the clean filename for later display
                         exhibit.localFileName = localFileName; 
-
-                        // Fetch the local file, not the URL
+                        
                         const promise = fetch(localFileName)
                             .then(response => {
                                 if (!response.ok) throw new Error(`Failed to fetch ${localFileName}`);
@@ -345,14 +317,12 @@
                                 console.error('Error fetching exhibit:', error);
                                 exhibit.textContent = `Error: Could not load ${localFileName}`;
                             });
-                        // --- FIX ENDS HERE ---
                         textExhibitPromises.push(promise);
                     }
                 });
             }
         });
 
-        // 3. Wait for all text exhibits to load, then display the quiz
         await Promise.all(textExhibitPromises);
         displayQuiz();
     }
@@ -370,18 +340,20 @@
             
             if (q.exhibits && q.exhibits.length > 0) {
                 q.exhibits.forEach(exhibit => {
-                    const filename = exhibit.ExhibitFileName.toLowerCase();
-                    if (filename.endsWith('.txt')) {
-                        // --- FIX STARTS HERE ---
-                        // Use the clean, local filename for the exhibit title
+                    const fullUrl = exhibit.ExhibitFileName;
+                    const filenameLower = fullUrl.toLowerCase();
+                    const localFileName = fullUrl.split('/').pop();
+
+                    if (filenameLower.endsWith('.txt')) {
                         quizHtml += `
                             <div class="exhibit-container">
-                                <strong>Exhibit: ${exhibit.localFileName}</strong>
+                                <strong>Exhibit: ${localFileName}</strong>
                                 <pre class="question-exhibit-text">${exhibit.textContent || ''}</pre>
                             </div>`;
-                        // --- FIX ENDS HERE ---
-                    } else if (filename.endsWith('.png') || filename.endsWith('.jpg') || filename.endsWith('.jpeg') || filename.endsWith('.gif')) {
-                         quizHtml += `<img src="${exhibit.ExhibitFileName}" alt="Exhibit for question ${index + 1}" class="question-exhibit">`;
+                    } else if (filenameLower.endsWith('.html')) {
+                        quizHtml += `<iframe src="${localFileName}" class="question-exhibit-frame" title="Exhibit: ${localFileName}"></iframe>`;
+                    } else if (filenameLower.endsWith('.png') || filenameLower.endsWith('.jpg') || filenameLower.endsWith('.jpeg') || filenameLower.endsWith('.gif')) {
+                         quizHtml += `<img src="${localFileName}" alt="Exhibit: ${localFileName}" class="question-exhibit">`;
                     }
                 });
             }
@@ -446,7 +418,10 @@
             questionElement.insertAdjacentHTML('beforeend', explanationHtml);
         });
         
-        quizContainer.removeChild(document.getElementById('submitBtn'));
+        const submitButton = document.getElementById('submitBtn');
+        if (submitButton) {
+            submitButton.remove();
+        }
 
         resultsContainer.innerHTML = `<h2>Your Score: ${score} out of ${currentQuizQuestions.length} (${Math.round((score / currentQuizQuestions.length) * 100)}%)</h2>`;
         resultsContainer.innerHTML += '<button id="restartBtn" class="restart-btn">Take Another Test</button>';
