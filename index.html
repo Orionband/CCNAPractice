@@ -321,19 +321,31 @@
         currentQuizQuestions.forEach(q => {
             if (q.exhibits) {
                 q.exhibits.forEach(exhibit => {
-                    if (exhibit.ExhibitFileName.toLowerCase().endsWith('.txt')) {
-                        const promise = fetch(exhibit.ExhibitFileName)
+                    const fullUrl = exhibit.ExhibitFileName;
+                    if (fullUrl.toLowerCase().endsWith('.txt')) {
+                        
+                        // --- FIX STARTS HERE ---
+                        // Extract the local filename from the full URL.
+                        // e.g., "https://.../somefile.txt" becomes "somefile.txt"
+                        const localFileName = fullUrl.split('/').pop();
+                        
+                        // Store the clean filename for later display
+                        exhibit.localFileName = localFileName; 
+
+                        // Fetch the local file, not the URL
+                        const promise = fetch(localFileName)
                             .then(response => {
-                                if (!response.ok) throw new Error(`Failed to fetch ${exhibit.ExhibitFileName}`);
+                                if (!response.ok) throw new Error(`Failed to fetch ${localFileName}`);
                                 return response.text();
                             })
                             .then(text => {
-                                exhibit.textContent = text; // Store fetched text in the exhibit object
+                                exhibit.textContent = text;
                             })
                             .catch(error => {
                                 console.error('Error fetching exhibit:', error);
-                                exhibit.textContent = `Error: Could not load ${exhibit.ExhibitFileName}`;
+                                exhibit.textContent = `Error: Could not load ${localFileName}`;
                             });
+                        // --- FIX ENDS HERE ---
                         textExhibitPromises.push(promise);
                     }
                 });
@@ -356,16 +368,18 @@
             quizHtml += `<div class="question" id="q-${index}">`;
             quizHtml += `<div class="question-text">${index + 1}. ${q.questionText}</div>`;
             
-            // Handle rendering of both image and text exhibits
             if (q.exhibits && q.exhibits.length > 0) {
                 q.exhibits.forEach(exhibit => {
                     const filename = exhibit.ExhibitFileName.toLowerCase();
                     if (filename.endsWith('.txt')) {
+                        // --- FIX STARTS HERE ---
+                        // Use the clean, local filename for the exhibit title
                         quizHtml += `
                             <div class="exhibit-container">
-                                <strong>Exhibit: ${exhibit.ExhibitFileName}</strong>
+                                <strong>Exhibit: ${exhibit.localFileName}</strong>
                                 <pre class="question-exhibit-text">${exhibit.textContent || ''}</pre>
                             </div>`;
+                        // --- FIX ENDS HERE ---
                     } else if (filename.endsWith('.png') || filename.endsWith('.jpg') || filename.endsWith('.jpeg') || filename.endsWith('.gif')) {
                          quizHtml += `<img src="${exhibit.ExhibitFileName}" alt="Exhibit for question ${index + 1}" class="question-exhibit">`;
                     }
