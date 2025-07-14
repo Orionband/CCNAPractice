@@ -281,8 +281,10 @@
 
     const deckManifest = {
         "CCNA 200-301": "questions.json",
+        "CCNP ENCOR 350-401": "questions_encor.json",
         "CCNP SCOR 350-701": "questions_scor.json",
-        "CCNP ENCOR 350-401": "questions_encor.json"
+        "Cisco CyberOps Associate": "questions_cyberops.json",
+        "CompTIA Security+": "questions_comptia_security.json"
     };
 
     let allQuestions = [];
@@ -439,14 +441,9 @@
 
             if (q.answerType === 'FB') {
                 const userInput = questionElement.querySelector(`#fb-input-${index}`);
-                // --- FIX #1: Add a guard clause to prevent crash on unanswered/unrendered FB questions ---
                 if (userInput) {
                     const userValue = userInput.value.trim().toLowerCase();
-                    
-                    // --- FIX #2: Handle case-insensitivity and multiple answers separated by commas ---
-                    const correctAnswers = (q.blanks && q.blanks[0] || "")
-                        .split(',')
-                        .map(ans => ans.trim().toLowerCase());
+                    const correctAnswers = (q.blanks && q.blanks[0] || "").split(',').map(ans => ans.trim().toLowerCase());
 
                     if (correctAnswers.includes(userValue)) {
                         isQuestionCorrect = true;
