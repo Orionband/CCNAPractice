@@ -2420,19 +2420,6 @@
                           ]
     },
     {
-        "questionId":  "CB11EC9C-BF27-419F-95D0-CBAC8216EC48",
-        "questionText":  "Drag the AireOS WLC configuration setting for VLANs and WLANs to the column on the right that defines the correct data format, maximum length, and/or allowed values.",
-        "explanation":  "The AireOS WLC uses two linked configuration areas to create a LAN: The dynamic interface and the WLAN. The dynamic interface configuration begins with an identifying text name of up to 31 characters. It defines the LAN\u0026#39;s wired (distribution system) part, including the VLAN ID. The dynamic interface configuration also provides the GUI field to define the VLAN ID, a decimal value from the standard or extended range.\n\nThe WLC GUI pages also allow the definition of the wireless LAN. The WLAN profile name (not listed here) and the SSID have the same text format and 32-character limit, often with the same values for convenience. The WLAN ID serves as a WLC identifier for the WLAN, with decimal ranges from 1-512.\n\nFinally, when using pre-shared keys (PSKs), and WPA2, the text key can range from 8-63 characters.",
-        "difficulty":  "1",
-        "comments":  "\u003cp\u003eFormerly\u0026nbsp;200301-WO-v1-2-app-002 in the 2023 Exam Updates question batch.\u003c/p\u003e\n",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "DBBD2171-2A0D-4288-98A6-DE6EAB369BC7",
         "questionText":  "Which of the following things must be identified when configuring a new secure WLAN on a WLC?",
         "explanation":  "A new WLAN must be configured with an SSID string, the appropriate dynamic interface, and the WPA version. Remember that the dynamic interface is used to logically map a VLAN to a WLAN. The WLAN configuration does not define the BSSID; that is determined by each AP and the WLAN it offers. In addition, you cannot specify specific channel numbers to use on the WLAN. Channels can be configured for a band or an RF profile as part of more advanced wireless functions on the WLC GUI.",
@@ -3699,19 +3686,6 @@
                           ]
     },
     {
-        "questionId":  "F0694DA8-1F2F-4607-8354-B2AC681B04B9",
-        "questionText":  "Drag the named ACL subcommand on the left to the equivalent numbered ACL global command on the right.",
-        "explanation":  "You can create named ACL permit and deny commands from any numbered ACL global access-list command by removing the text up to the permit or deny keyword. For instance, the global command access-list 101 permit ip any any by removing the words before the permit keyword, becoming permit ip any any. Using that command in named ACL mode creates the exact same logic.\n\nFor this question, the items you drag match the correct ones to drag to after removing the text access-list 101. The unused items have slight differences, including swapped source and destination addresses and using the wrong protocol name.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "19E69BB0-7BE0-4BB8-AE43-D535F26230A1",
         "questionText":  "Which named ACL listed in the exhibit would adequately replace ACL 150 shown here:\u0026nbsp;\n\naccess-list 150 deny tcp host 172.16.1.128 host 10.1.2.3 eq smtp\naccess-list 150 deny udp 172.16.1.0 0.0.0.255 host 10.1.2.3 eq tftp\naccess-list 150 deny tcp 172.16.0.0 0.0.255.255 host 10.1.2.3 eq 22\naccess-list 150 permit ip any any",
         "explanation":  "When converting a numbered ACL to a named ACL, it first must be determined which type of ACL is being converted. In this case, because the number used is 150, it is an extended ACL. This is then used to perform the initial creation of the ACL with the ip access-list extended name command; this will enter the user into extended named ACL configuration mode. The commands from here are very similar to those used with a numbered list but without the access-list and the ACL number at the beginning of the statement. For example, access-list 150 deny udp 172.16.1.0 0.0.0.255 host 10.1.2.3 eq tftp becomes deny udp 172.16.1.0 0.0.0.255 host 10.1.2.3 eq tftp.",
@@ -4619,19 +4593,6 @@
                           ]
     },
     {
-        "questionId":  "9E2E8B1D-BD4A-46E6-AFE1-C476BD14ED72",
-        "questionText":  "Drag the AAA terms to the matching descriptions.",
-        "explanation":  "",
-        "difficulty":  "1",
-        "comments":  "\u003cp\u003eFormerly\u0026nbsp;200301-WO-v2-2-app-002 from the 2023 exam updates questions batch.\u003c/p\u003e\n",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "7B8AFAE4-B6FE-445D-8422-D311E73DE989",
         "questionText":  "Your organization requires all traffic to be encrypted and communications to be secure. From the different protocols listed, which protocol meets these requirements and supports AAA?",
         "explanation":  "TACACS+ is a client/server protocol that separates the Authentication, Authorization, and Accounting functionality. TACACS+ utilizes TCP port 49, and its traffic is encrypted. TACACS+ is a Cisco proprietary protocol and its communication is secure.\n\nThe Domain Name System (DNS) protocol is used to resolve IP addresses to hostnames and hostnames to IP addresses. Its communication is not encrypted or secure by default. DNS utilizes both UDP and TCP in different instances. DNS uses port 53 for both TCP and UDP and does not support AAA.\n\nRADIUS is a standards-based client/server protocol that merges the authentication and authorization functionality into a single resource. RADIUS communicates over UDP ports 1812 and 1813. It is not completely encrypted or secure.\n\nHyperText Transfer Protocol (HTTP) is used to browse the Internet. Specifically, you utilize uniform resource locators (URL) to locate a web address on the Internet or a local network. Although today most use of HTTP also uses TLS to secure the protocol, HTTP itself does not secure the traffic.",
@@ -4749,19 +4710,6 @@
                                   "Text":  "Encrypts the entire packet",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "11959572-AFEF-4283-B2A2-EAA04A966F58",
-        "questionText":  "Drag the AAA terms with actions expected in networking devices that perform the specific AAA action.",
-        "explanation":  "An SSH login requires the user to supply a username and password, which is a classic case of user authentication. Any user that begins in user mode and then moves to privileged mode (using the enable command) authorizes themselves to perform additional tasks, which is an example of authorization. Finally, log messages can note various activities done by end users, for instance, when they use configuration mode. Using a Syslog server stores the messages for later retrieval, an example of an accounting service.",
-        "difficulty":  "1",
-        "comments":  "\u003cp\u003eFormerly\u0026nbsp;200301-WO-v2-1-app-002 from the 2023 Exam Updates question batch.\u003c/p\u003e\n",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -7517,23 +7465,6 @@
                           ]
     },
     {
-        "questionId":  "D39A2E6E-0041-4567-B019-1F3D36AD0476",
-        "questionText":  "Layer 3 switches D1 and D2 will be in the same FHRP group. The figure shows their interface IP addresses on their respective VLAN interfaces for VLAN 12. The draggable items list a specific FHRP, VIP, and group number. Drag those items to the virtual MAC address used in each case. For any MAC addresses that inject a router number, assume router number 1.",
-        "explanation":  "The patterns for the virtual MACs of the various FHRPs are:\n\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;HSRPv1: 0000.0c07.aczz\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;HSRPv2: 0000.0c9f.fzzz\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;VRRPv3: 0000.5e00.01zz\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;GLBP: 0007.bf0z.zzrr\n\nIn these patterns, zz and zzz represent two- and three-digit hex values equivalent to the decimal FHRP group number. Also, with GLBP, the last two digits of the virtual MAC represent the router number (01, 02, 03, or 04), values dynamically assigned to the group members.\n\nThe VIP values do not impact the virtual MAC addresses. The group numbers do, with these results for the group number codes in the virtual MAC addresses:\n\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;Group 4 with HSRPv2: zzz = 004, with virtual MAC 0000.0c9f.f004.\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;Group 6 with VRRPv3: zz = 06, with virtual MAC 0000.5e00.0106.\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;Group 8 with GLBP: zzz = 008, with virtual MAC for router 1 of 0007.bf00.0801.\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;Group 10 with HSRPv1: zz = 0a, with virtual MAC of 0000.0c07.ac0a.\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;Group 12 with HSRPv2: zzz = 00c, with virtual MAC 0000.0c9f.f00c.\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;Group 14 with VRRPv3: zz = 0e, with virtual MAC 0000.5e00.010e",
-        "difficulty":  "1",
-        "comments":  "\u003cp\u003eFormerly\u0026nbsp;200301-WO-v2-2-app-005 from 2023 Exam Updates question batch.\u003c/p\u003e\n",
-        "exhibits":  [
-                         {
-                             "ExhibitId":  "9399220C-369F-4A9C-A810-4EB1B2C0E87C",
-                             "ExhibitTitle":  "1",
-                             "ExhibitFileName":  "https://builder.pearsonitcertification.com/Content/Exhibits/9399220C-369F-4A9C-A810-4EB1B2C0E87C/200301-WO-v2-2-app-005.jpg"
-                         }
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "494F23E1-C40C-46E0-BF19-1F5E3AF4857D",
         "questionText":  "There are two Layer 3 switches acting as core routers called SW1 and SW2. SW1 and SW2 have the IP addresses 192.168.1.1 and 192.168.1.2 on VLAN 10, respectively. If host 1 has a configured default gateway of 192.168.1.1 and SW1 were to have a failure that brings the device offline, what protocol should be implemented to mitigate this failure scenario?",
         "explanation":  "In a design situation like this, where VLANs are being spanned between multiple Layer 3 switches that have corresponding SVIs, you would want to implement a First Hop Redundancy Protocol, such as Hot Standby Router Protocol (HSRP). There is a specific failure situation if you do not implement a FHRP. With host 1 having a configured default gateway of SW1, and SW1 having a failure situation that brings the device offline, host 1 has essentially lost all connectivity outside the local area network (VLAN). If you were to implement a FHRP like HSRP, this situation would be mitigated because the default gateway address would be a virtual IP address and MAC address that is shared between both SW1 and SW2.\n\n\tSTP prevents switching loops and should be used while also using any FHRP solution, with STP design considered with FHRP design. For example, the root bridge and secondary root bridge placements should be on SW1 and SW2 in the question to match the FHRP active and standby roles, respectively. With that said, STP is not the protocol that can resolve the issue with a default gateway going offline.\n\n\tRunning an IGP is important but the issue at hand is more of a default gateway redundancy situation.\n\n\tBGP is not pertinent to this question.",
@@ -7726,24 +7657,6 @@
                           ]
     },
     {
-        "questionId":  "95F73D4A-123F-4814-B927-ED93729EB1BE",
-        "questionText":  "Layer 3 switches D1 and D2 will be in the same FHRP group. The figure shows their interface IP addresses on their respective VLAN interfaces for VLAN 11. The draggable items list a specific FHRP, VIP, and group number. Drag those items to the virtual MAC address used in each case. For any MAC addresses that inject a router number, assume router number 1.",
-        "explanation":  "The patterns for the virtual MACs of the various FHRPs are:\n\n\n\tHSRPv1: 0000.0c07.aczz\n\tHSRPv2: 0000.0c9f.fzzz\n\tVRRPv3: 0000.5e00.01zz\n\tGLBP: 0007.bf0z.zzrr\n\n\nIn these patterns, zz and zzz represent two- and three-digit hex values equivalent to the decimal FHRP group number. (Protocols that support 256 or fewer groups need only two hex digits; three hex digits support more.) The code rr shown for GLBP represents the router number (01, 02, 03, 04.)\n\nWorking through the answers to this question:\n\n\n\tGroup 20 with HSRPv2: zzz = 014 (decimal 20 converts to hex 14), with virtual MAC 0000.0c9f.f014.\n\tGroup 16 with VRRPv3: zz = 10 (decimal 16 converts to hex 10), with virtual MAC 0000.5e00.0110.\n\tGroup 2 with GLBP: zzz = 002, with the question stating to assume router 1, making the h virtual MAC for router 1 be 0007.bf00.0201.\n\tGroup 32 with HSRPv1: zz = 20 (decimal 32 converts to hex 20), with virtual MAC of 0000.0c07.ac20.\n\tGroup 32 with HSRPv2: zzz = 020 (decimal 32 converts to hex 20), with virtual MAC 0000.0c9f.f020.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-                         {
-                             "ExhibitDescription":  "",
-                             "ExhibitId":  "CEF0C0B7-9A9C-4DA2-8F22-EAB34C1D041B",
-                             "ExhibitTitle":  "1",
-                             "ExhibitFileName":  "https://builder.pearsonitcertification.com/Content/Exhibits/CEF0C0B7-9A9C-4DA2-8F22-EAB34C1D041B/200301-11-WO-v2-3-16-02.png"
-                         }
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "F9D6B2AD-4469-4CF1-9D26-F5C3915633A9",
         "questionText":  "Which answers list a feature of HSRPv2 that is not true about VRRPv3 or GLBP?",
         "explanation":  "The question asks for answers true of HSRPv2 but also not true of VRRPv3 or GLBP. Of the listed answers, the one correct answer is the only one both true of HSRPv2 and untrue of the others. Of the incorrect answers:\n\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;Both HSRPv2 and GLBP are Cisco proprietary, use multicast address 224.0.0.102, and require the VIP to be different than any router\u0026rsquo;s interface address.\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;Both HSRPv2 and VRRPv3 support active/standby load balancing within one group.\n\u0026bull;\u0026nbsp;\u0026nbsp; \u0026nbsp;HSRPv2 does not use a unique virtual MAC per router.",
@@ -7833,19 +7746,6 @@
                                   "Text":  "PUT",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "8FC3BA10-F832-46EA-8028-5E044E5B9349",
-        "questionText":  "A router has five interfaces. The router SNMP agent lists a set of MIB variables for each interface, with the interfaces organized into a list with object IDs ending in 0, 1, 2, 3, 4, 5. Drag the SNMP verb on the left to the description that best matches what an SNMP manager can accomplish with these variables when managing the router.",
-        "explanation":  "Two unused items are invalid SNMP verbs (GetAll and GetList). SNMP does include the Trap verb, but it does not retrieve data as requested by the manager. Instead, it supplies information to the manager without being asked.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -8542,19 +8442,6 @@
                           ]
     },
     {
-        "questionId":  "211FB574-E5FA-4609-8FFA-CA4E8690AE24",
-        "questionText":  "Drag the IEEE Ethernet standard to the minimum UTP cable category required by that standard to run at the standard\u0026rsquo;s maximum speeds at distances of 100 meters.",
-        "explanation":  "",
-        "difficulty":  "1",
-        "comments":  "\u003cp\u003eFormerly\u0026nbsp;200301-WO-v2-2-app-006 from the 2023 Exam Updates question batch.\u003c/p\u003e\n",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "AAA5AF8A-889B-4F28-ADC9-CF422F1F75DF",
         "questionText":  "Per standard, which OM cable types does 10 Gbps Ethernet (10GBASE-SR) support for distances of 200 meters?",
         "explanation":  "Optical Multimode (OM) fiber optic cabling supports various Ethernet standards. The IEEE 10BASE-SR standard allows for the use of OM1, OM2, OM3, and OM4, with OM3 rated for 300 meters and OM4 for 400 meters. OM1 and OM2 support 33 and 82 meters per the standard, respectively.",
@@ -8784,19 +8671,6 @@
                                   "Text":  "5G mmWave",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "AACB7C17-CA3E-48C3-9EEC-442FCD92B873",
-        "questionText":  "Drag the items on the left to the matching items on the right that are true about site-to-site IPsec VPNs.",
-        "explanation":  "",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -10256,19 +10130,6 @@
                           ]
     },
     {
-        "questionId":  "C9AD1A45-91CF-4B13-B95F-1A56DAFA31F1",
-        "questionText":  "Drag the Cisco SD-Access fabric device role to its current function.",
-        "explanation":  "There are four fabric node roles within the Cisco SD-Access fabric:\n\n\n\tFabric control node: This is the Cisco SD-Access control plane device. This device tracks all endpoints in the fabric site and associates the endpoints to fabric nodes. This is accomplished with the use of LISP. A control node can be physical within the fabric collocated on a border node, or it can be physically outside the fabric. In either option, the fabric control node is part of the Cisco SD-Access fabric.\n\tFabric border node: This is the gateway between Cisco SD-Access and external networks. The external networks can be your other networks or real external networks. This is where network virtualization outside the Cisco SD-Access fabric would take place. Think VNF, VRF-Lite, MPLS, and SD-WAN. This is also where security (SGT) propagation outside the fabric would start.\n\tFabric edge node: This is where your endpoints connect into the fabric and is similar to the legacy access layer switch. From a fabric perspective, this is where the endpoint devices would register with the fabric to let the rest of the Cisco SD-Access fabric know how to reach you.\n\tFabric intermediate node: This interconnects the edge nodes to the border nodes. This device does not run VXLAN like the rest of the fabric devices; it routes and transports IP traffic inside the fabric.",
-        "difficulty":  "1",
-        "comments":  "\u003cp\u003e6/8 - query to au\u003c/p\u003e\n\n\u003cp\u003e4/3/24 Updated SDA to Cisco SD-Access -JG\u003c/p\u003e\n",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "26F92333-6097-420E-85BC-26975A4BE4A0",
         "questionText":  "When planning a greenfield Cisco SD-Access design, what traditional LAN design points should be included?",
         "explanation":  "\u0026nbsp;\n\nWhen planning a greenfield Cisco SD-Access design, the traditional LAN design points are\n\n\n\tThe number of switchports needed in each switch\n\tThe required speed of the switchports\n\tThe benefits of a switch stack in each location\n\tThe current cable lengths and types already used\n\tThe requirement to support power to endpoint devices\n\tThe current power available in each new switch\n\tLink capacity for links between switches\n\n\nFor the incorrect options, a security firewall to properly segment traffic is actually something that does not help within the LAN portion of Cisco SD-Access.\nAlso, note that neither the underlay or overlay requires the use of Spanning Tree, so the STP mode need not be consisered.",
@@ -10438,19 +10299,6 @@
                                   "Text":  "Each policy can be removed without fear of impacting another policy.",
                                   "IsCorrect":  true
                               }
-                          ]
-    },
-    {
-        "questionId":  "46324740-1C90-4645-B96E-5BBDDB81DD5E",
-        "questionText":  "Drag and drop the Cisco SD-Access terms to their respective definitions.",
-        "explanation":  "The high-level components of the Cisco SD-Access are the underlay, the overlay, and the fabric.\n\nThe underlay is the physical path and devices that form the IP connectivity end to end.\n\nThe overlay is the logical decoupling of the underlay with the instantiated intent. Sometimes the overlay is referred to as a VPN, or a virtual network.\n\nThe fabric is the combination of everything within Cisco SD-Access, including the underlay, overlay, Cisco Catalyst Center, and Cisco Identity Services Engine.",
-        "difficulty":  "1",
-        "comments":  "\u003cp\u003e4/3/24 Updated SDA to Cisco SD-Access and DNA Center to Cisco Catalyst Center -JG\u003c/p\u003e\n",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -11148,19 +10996,6 @@
                           ]
     },
     {
-        "questionId":  "25EF5FCE-0150-4442-BCF8-299168435AF3",
-        "questionText":  "Drag the Ansible term to the Ansible term definition.",
-        "explanation":  "Ansible has four key terms: playbooks, inventory, templates, and variables.\n\n\t\n\t\tPlaybooks contain the logic that Ansible should follow\n\t\n\t\tInventory contains information about the devices\n\t\n\t\tTemplates represent a device\u0026rsquo;s configuration with variables\n\t\n\t\tVariables are used to substitute into templates\n\t\t\u0026nbsp;",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "D3230E7B-42E4-4EBA-817F-3016A3BD62E6",
         "questionText":  "Which of the following are attributes of Terraform?",
         "explanation":  "Ansible uses playbooks, is agentless, and leverages YAML modeling language. Terraform uses a declarative model for communications.",
@@ -11186,19 +11021,6 @@
                                   "Text":  "YAML",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "E665127A-C416-4F03-AD93-33E20849989E",
-        "questionText":  "Drag the Terraform term to the Terraform term definition.",
-        "explanation":  "Configuration files describe the desired state of the infrastructure and specify resources along with their configurations. Providers are plug-ins that enable interaction with different infrastructure platforms such as AWS, Azure, and Google Cloud. Resources are components you want to create and manage, such as virtual machines, networks, or databases. Variables provide a method to reuse code and make configurations more flexible.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -11283,19 +11105,6 @@
                                   "Text":  "Execute",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "D56494AD-F5F7-4901-836B-74BA23FAAF1E",
-        "questionText":  "Drag the Terraform core workflow term to the Terraform core workflow definition.",
-        "explanation":  "Write: Where you define the resources that will be used across multiple cloud providers or services. Plan: An execution plan that describes the infrastructure that will be created, updated, or destroyed based on the current configuration and infrastructure. Apply: Once the plan is approved, the proposed operations will be completed in the appropriate order. Verify: An incorrect option because Terraform\u0026rsquo;s core workflow has only three stages.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -12770,19 +12579,6 @@
                                   "Text":  "\u003cstrong\u003ecopy config running startup\u003c/strong\u003e",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "178CAE23-5BC1-4132-85C9-F570C93AF77A",
-        "questionText":  "The switches in a small campus support only copper UTP cabling and can negotiate to use various speeds. The interface ID implies the set of speeds available for negotiation on those interfaces. Drag the interface ID abbreviation from the left column to the correct group of speeds on the right.",
-        "explanation":  "For Ethernet interfaces that support the negotiation of different speeds, the test interface type identifies the highest speed. To answer this question, you should connect these ideas:\n\nE \u0026ndash; abbreviation for Ethernet \u0026ndash; one speed, 10 Mbps\n\nF \u0026ndash; abbreviation for FastEthernet \u0026ndash; supports 100 Mbps max, but also 10 Mbps (10/100 Mbps)\n\nG \u0026ndash; abbreviation for GigabitEthernet \u0026ndash; supports 1 Gbps (1000 Mbps) max, but also 10 and 100 Mbps (10/100/1000 Mbps)\n\nT \u0026ndash; abbreviation for TengigabitEthernet \u0026ndash; supports 10 Gbps max, but on multigig interfaces, also supports 1 Gbps, 2.5 Gbps, and 5 Gbps (1/25./5/10)",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -17865,23 +17661,6 @@
                           ]
     },
     {
-        "questionId":  "906885C9-76D6-4AF1-AA64-09489FC973F1",
-        "questionText":  "The figure shows the subnets for a small part of a network, along with router names and interface IDs. The router interfaces should use an address from the respective subnets. Drag the ip address command on the left to the router/interface ID combination on the right that configures an IP address in the correct subnet.",
-        "explanation":  "Consider the ip address interface subcommand, independent of the subnet design. The command must use a valid mask. For instance, the router would reject a mask value of 1.2.3.4. It must also use an address and mask combination so that the address value is not a subnet ID or subnet broadcast address. Those rules make these answers incorrect, regardless of the subnet design:\n\n\n\tip address 10.10.160.1 255.248.255.0 \u0026ndash; the mask is an invalid value.\n\n\nExamining the design, you then need to find commands that use some address from the associated subnet, with the command also using the correct mask. The subnets are:\n\nR1 G0/0/0: subnet 10.10.16.0, mask 255.255.240.0, with usable address range 10.10.16.1 \u0026ndash; 10.10.31.254.\n\nR2 G0/0/0: subnet 10.10.64.0, mask 255.255.240.0, with usable address range 10.10.64.1 \u0026ndash; 10.10.79.254.\n\nR3 G0/0/0: subnet 10.10.128.0, mask 255.255.248.0, with usable address range 10.10.128.1 \u0026ndash; 10.10.135.254.\n\nR4 G0/0/0: subnet 10.10.160.0, mask 255.255.248.0, with usable address range 10.10.160.1 \u0026ndash; 10.10.167.254.\n\nThe previous list provides detail for all the correct answers. For the other incorrect items (those not dragged to the right), one uses a mask that does not match the design (255.255.255.240), and two use IP addresses outside the range of addresses in the subnet for that location in the design.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-                         {
-                             "ExhibitId":  "1B655D98-2463-46B2-ADCD-4E573FD39CB3",
-                             "ExhibitTitle":  "1",
-                             "ExhibitFileName":  "https://builder.pearsonitcertification.com/Content/Exhibits/1B655D98-2463-46B2-ADCD-4E573FD39CB3/200301-11-WO-v1-4-17-02.png"
-                         }
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "5C96BFB2-3F65-452F-A581-108B889D731E",
         "questionText":  "Which of the following can be used to place a valid route into the routing table of a Cisco IOS router?",
         "explanation":  "Routes can be added to the routing table of an IOS router by configuring an IP address on an up/up interface, adding static routes or by dynamically learning routes through a routing protocol such as OSPF.\n\n\tName-to-IP mapping, such as local or DNS services, doesn\u0026rsquo;t add routes to the routing table. Using wildcard masks, which apply to ACLs and some network statements, on their own, doesn\u0026rsquo;t specifically add routes to a router\u0026rsquo;s routing table.",
@@ -18101,24 +17880,6 @@
                                   "Text":  "It adds the command to the running-config file and adds the route to the routing table, retaining the route shown in the exhibit.",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "63CD9631-A022-4154-B0AE-94B475097004",
-        "questionText":  "Imagine you need to configure static routes on router R1 to replace the four subnets listed in the output of the show ip route command in the exhibit. You have been asked to use the highest possible administrative distance values while achieving the goal of replacing the existing routes. Drag and drop the correct administrative distance setting used for each new ip route command.",
-        "explanation":  "The output from the show ip route command lists each route\u0026rsquo;s administrative distance as the first number inside the square brackets. Those values are:\n\n\n\tFor 10.1.1.0/24: 110\n\tFor 10.1.2.0/24: 90\n\tFor 10.1.3.0/24: 120\n\tFor 10.1.4.0/24: 123\n\n\nThe correct answers, per the detail in the question, should be an administrative distance once less than those values, or 109, 89, 119, and 122, respectively.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-                         {
-                             "ExhibitDescription":  "",
-                             "ExhibitId":  "1253B5DA-9CCD-4120-AF77-0E060CD49B3A",
-                             "ExhibitTitle":  "4",
-                             "ExhibitFileName":  "https://builder.pearsonitcertification.com/Content/Exhibits/1253B5DA-9CCD-4120-AF77-0E060CD49B3A/200301-11-WO-v1-2-17-04.html"
-                         }
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -19225,28 +18986,6 @@
                           ]
     },
     {
-        "questionId":  "6595253C-F13C-4A46-8BD4-43F52BDF837E",
-        "questionText":  "Host A in the figure successfully leases an IP address and learns other settings from the DHCP server shown. Examine the exhibit, which shows a command taken from host A. The output omits some text, replacing it with the generic text \u0026quot;Item A,\u0026quot; \u0026quot;Item B,\u0026quot; and so on. Drag and drop the text on the left to the correct item location in the sample output in the example.",
-        "explanation":  "The figure supplies the router IP address and mask (172.25.1.1/25), from which you can derive the subnet details:\n\n\n\tSubnet ID: 172.25.1.0\n\tFirst usable address: 172.25.1.1\n\tLast usable address: 172.25.1.126\n\tSubnet broadcast address: 172.25.1.127\n\n\nOf the available draggable answers, 172.25.1.51 and 172.25.1.1 come from the usable address range. The router already uses 172.25.1.1, so 172.25.1.51 must be the address used by the host.\n\nFor the mask, the figure supplies the value as /25, so you have to convert it to the correct DDN value of 255.255.255.128. (The 255.255.255.192 value is incorrect and equivalent to mask /26.)\n\nFor the default router setting, you can find that in the figure: 172.25.1.1, which is R1\u0026#39;s G0/0/0 interface address.\n\nAs for the DHCP server IP address, you can find that again in the figure.\n\nThe correct output should look like this, with bold added for the items in the drag-and-drop exercise.\n\n\nWindows_A\u003e ipconfig /all\nEthernet adapter Ethernet 5:\n\n   Connection-specific DNS Suffix  . :\n   Description . . . . . . . . . . . : Realtek USB GbE Family Controller\n   Physical Address. . . . . . . . . : 00-E0-4C-69-08-47\n   DHCP Enabled. . . . . . . . . . . : Yes\n   Autoconfiguration Enabled . . . . : Yes\n   Link-local IPv6 Address . . . . . : fe80::6878:1f3d:6223:f4db%6(Preferred)\n   IPv4 Address. . . . . . . . . . . : 172.25.1.51(Preferred)\n   Subnet Mask . . . . . . . . . . . : 255.255.255.128\n   Lease Obtained. . . . . . . . . . : Thursday, May 25, 2023 8:25:19 AM\n   Lease Expires . . . . . . . . . . : Friday, May 26, 2022 8:25:19 AM\n   Default Gateway . . . . . . . . . : 172.25.1.1\n   DHCP Server . . . . . . . . . . . : 172.25.2.99\n   DHCPv6 IAID . . . . . . . . . . . : 100720716\n   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-19-A0-DC-F0-24-FD-52-CB-50-C9\n   DNS Servers . . . . . . . . . . . : 208.67.222.222\n                                       208.67.222.220\n   NetBIOS over Tcpip. . . . . . . . : Enabled",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-                         {
-                             "ExhibitId":  "9C248439-5F9A-4CC6-9BC9-3D9A24D2D1ED",
-                             "ExhibitTitle":  "4",
-                             "ExhibitFileName":  "https://builder.pearsonitcertification.com/Content/Exhibits/9C248439-5F9A-4CC6-9BC9-3D9A24D2D1ED/200301-11-WO-v1-2-19-03.html"
-                         },
-                         {
-                             "ExhibitId":  "7B92E9F6-3473-4277-A666-506F80AD89C2",
-                             "ExhibitTitle":  "1",
-                             "ExhibitFileName":  "https://builder.pearsonitcertification.com/Content/Exhibits/7B92E9F6-3473-4277-A666-506F80AD89C2/200301-11-WO-v1-2-19-03.png"
-                         }
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "93F0E14E-E77F-43F2-8DE8-4B7A4A0C43D4",
         "questionText":  "Refer to the diagram. PC1 sent out a DHCP discover message looking to find a DHCP server to obtain an address. What is the source IP address that PC1 would use for this message?",
         "explanation":  "When sending out a DHCP discover message, PC1 wouldn\u0026#39;t have an assigned IP address yet. To overcome that issue, the PC will send the packet with a source IP address of 0.0.0.0 and a destination address of 255.255.255.255 (broadcast). This is also true when sending the DHCP request message.",
@@ -19348,23 +19087,6 @@
                                   "Text":  "\u003cstrong\u003eipconfig\u003c/strong\u003e",
                                   "IsCorrect":  true
                               }
-                          ]
-    },
-    {
-        "questionId":  "F99046FA-9B16-468E-B041-856F4B337867",
-        "questionText":  "The exhibit shows output from Mac host B. The output refers to host B\u0026#39;s one working Ethernet interface as Ethernet 8 and link 20. Drag the values on the left to the host setting on the right based on the information in this output.",
-        "explanation":  "The output below, with bold highlights added, shows all the facts needed to choose what items to drag for the question. Working from top to bottom through the output from the ifconfig en8 command:\n\n\u0026quot;inet 172.26.14.130\u0026quot; \u0026ndash; refers to the host\u0026#39;s IP address on the interface.\n\n\u0026quot;netmask 0xffffffc0\u0026quot; \u0026ndash; refers to the host\u0026#39;s IP mask on the interface in hex. You can convert each pair of hex digits to its decimal equivalent to get 255.255.255.192.\n\n\u0026quot;broadcast 172.26.14.191\u0026quot; \u0026ndash; lists the end of the range of addresses in the subnet \u0026ndash; the subnet broadcast address. But it is not the host\u0026#39;s address, the default router\u0026#39;s address, or the DHCP server\u0026#39;s address.\n\nThen, for the netstat -rn command:\n\nGateway column, \u0026quot;172.26.14.129\u0026quot; \u0026ndash; the default router.\n\nInternet column, \u0026quot;172.26.14.128/26\u0026quot; \u0026ndash; the subnet ID and subnet mask in prefix format. You can convert /26 to DDN format to find the correct mask (255.255.255.192). (This route serves as the host\u0026#39;s route to match packets destined for the local subnet, much like a connected route on a Cisco router.)\n\nInternet column, \u0026quot;172.26.14.130/32\u0026quot; \u0026ndash; A route for the host\u0026#39;s IP address on some interface, in this case, the EN8 interface. This output confirms the host uses IP address 172.26.14.130. (This route serves as the host\u0026#39;s route to match packets destined for itself, much like a local route on a Cisco router.)\n\n\u0026nbsp;\n\n\nMac_B$ ifconfig en8\nen8: flags=8863 mtu 1500\n\toptions=6467\n         ether 00:e0:4c:68:1f:26 \n         inet6 fe80::184c:56f9:fd3b:d6e7%en8 prefixlen 64 secured scopeid 0x14 \n         inet 172.26.14.130 netmask 0xffffffC0 broadcast 172.26.14.191\n         nd6 options=201\n         media: autoselect (1000baseT )\n         status: active\n\nMac_B\u003e netstat -rn\nRouting tables\n\nInternet:\nDestination        Gateway            Flags           Netif Expire\ndefault            172.26.14.129      UGScg             en8       \n172.26.14.128/26   link#20            UCS               en8      !\n172.26.14.130/32   link#20            UCS               en8      !",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-                         {
-                             "ExhibitId":  "437C52DE-ADC7-4F4E-BBDD-FDD9998F0AA5",
-                             "ExhibitTitle":  "4",
-                             "ExhibitFileName":  "https://builder.pearsonitcertification.com/Content/Exhibits/437C52DE-ADC7-4F4E-BBDD-FDD9998F0AA5/200301-11-WO-v1-4-19-04.html"
-                         }
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -19992,19 +19714,6 @@
                           ]
     },
     {
-        "questionId":  "FEE336DE-9467-4389-B5D8-0C297DD86342",
-        "questionText":  "Drag the multicast IP address on the left to the IP routing protocol that uses the address on the right.",
-        "explanation":  "Note: OSPF uses 224.0.0.5 as the all-SPF-routers multicast address and 224.0.0.6 as the all-DR-routers multicast address.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "808C949A-762B-4D6C-97BA-11512DF22DA4",
         "questionText":  "Which answers correctly describe the function and use of OSPF database description (DD) messages?",
         "explanation":  "Several OSPF message types exist, including:\n\n\tHello: Used by a router to announce itself to neighbors, discover other neighbors, and to decide if two routers have matching settings so they can become neighbors.\u0026nbsp;\n\tLink-State Update (LSU): Used by a router to send LSAs to a neighbor. The LSAs each contain the detailed data about the LSA.\n\tLink-State Database Descriptor (DD): Used by a router after becoming a neighbor, but before sending LSUs, to send a summary list of LSAs to a neighbor. The routers use the lists in the DD message as part of the process of deciding which LSAs it should exchange with LSU packets.\n\tThree answers describe the function of the DD message, with the one describing how DD messages list the known LSAs being the correct answer.\n\n\tTwo answers mention the timing of the use of DD packets. These packets occur after routers become neighbors, but before (and in preparation for) sending LSU packets.",
@@ -20468,23 +20177,6 @@
                                   "Text":  "R2\u0026rsquo;s F0/1 is configured using OSPF \u003cstrong\u003enetwork\u003c/strong\u003e configuration.",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "47B8FEFB-F914-4248-BD81-9DF0A48E01F7",
-        "questionText":  "The figure shows the IP address/mask combinations configured on several interfaces. By convention, this network uses OSPF network commands. Each network command should use a wildcard mask that matches all addresses in the subnet for each interface. It should also place the interface in area 0. Drag the network command on the left to the interface whose subnet it matches on the right.",
-        "explanation":  "The command should use these values to create an OSPF network command that matches all addresses in a subnet:\n\n\n\tThe subnet ID\n\tThe inverse of the DDN subnet mask\n\n\nUsing subnetting math, you can find the subnet ID based on each interface\u0026#39;s IP address and mask. First, to find the inverse of the DDN masks in this question, convert from prefix notation to DDN. Then subtract the DDN mask from 255.255.255.255. For instance, for mask /26:\n\n\n\t/26 is equivalent to 255.255.255.192\n\tThen, octet by octet, subtract 255.255.255.192 from 255.255.255.255, leaving 0.0.0.63.\n\n\nFor the other mask in the figure, /24, the DDN mask is 255.255.255.0, with an inverted value of 0.0.0.255.\n\nThe subnet IDs, as calculated from the interface address/mask pairs, are:\n\n\n\tG0/0/0: 172.16.31.0\n\tG0/0/1: 172.16.30.64\n\tG0/0/2: 172.16.31.128\n\n\nFor the incorrect answers (the unused draggable items):\n\nnetwork 172.16.30.80 0.0.0.63 area 0 \u0026ndash; 172.16.30.80 is not a subnet ID on any of the interfaces. It is an address in subnet ID 172.16.30.64/26.\n\nnetwork 172.16.30.64 0.0.0.31 area 0 \u0026ndash; 0.0.0.31 is not an inverted subnet mask for any interface used in this question, although it is valid outside the question\u0026#39;s constraints. This command matches an address range that omits the higher-end half of the IP subnet. It would work because it matches the G0/0/1 IP address, but it does not meet the requirements in the question to match all addresses in the subnet.\n\nnetwork 172.16.30.160 0.0.0.63 area 0 - 172.16.30.80 is not a subnet ID on any of the interfaces. It is an address in subnet ID 172.16.30.128/26.\n\nnetwork 172.16.30.0 0.0.1.255 area 0 - 0.0.1.255 is not an inverted subnet mask for any interface used in this question, although it is valid outside the question\u0026#39;s constraints.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-                         {
-                             "ExhibitId":  "93556A01-E259-4543-9737-184F86AFF846",
-                             "ExhibitTitle":  "1",
-                             "ExhibitFileName":  "https://builder.pearsonitcertification.com/Content/Exhibits/93556A01-E259-4543-9737-184F86AFF846/200301-11-WO-v1-1-22-02.png"
-                         }
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -20977,19 +20669,6 @@
                           ]
     },
     {
-        "questionId":  "BAC01CE7-C91F-4AC4-9385-8B29DAB6E71D",
-        "questionText":  "The configuration in the exhibit shows all commands that could impact the OSPF Hello and Dead intervals on three interfaces attached to router R1. Predict the settings IOS will use for each interface, and drag the numeric values on the left to the matching interface and OSPF setting combinations.\n\n\nR1(config)# interface g0/0/1\nR1(config-if)# ip ospf hello-interval 24\nR1(config)# interface g0/0/2\nR1(config-if)# ip ospf dead-interval 60\nR1(config)# interface g0/0/3\nR1(config-if)# ! No related configuration \nR1(config-if)#",
-        "explanation":  "On LAN interfaces, IOS defaults to a Hello interval of 10 and a Dead interval of four times Hello, resulting in a calculation of 40 seconds. Beyond the defaults, if the configuration sets an interface\u0026#39;s Hello interval but not its Dead interval, IOS calculates the Dead interval as four times Hello. However, if the configuration sets the Dead interval to some value with no configuration of the Hello interval, IOS does not change the Hello interval.\n\nIn this question, interfaces G0/0/1 lists configuration for the Hello interval with G0/0/2 showing configuration for the Dead interval. The configuration for interface G0/0/3 has no related settings, leaving the values as defaults. With the above logic:\n\n\n\tG0/0/1 uses the configured 24-second Hello interval and a calculated 4x24 = 96-second Dead interval.\n\tG0/0/2 uses the default 10-second Hello interval and a configured 60-second Dead interval.\n\tG0/0/3 uses the default 10-second and 40-second Hello and Dead intervals, respectively.",
-        "difficulty":  "1",
-        "comments":  "\u003cp\u003eInline exhibit\u003c/p\u003e\n",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "5EBAC0DE-4AFF-4419-B4C6-94BD2A822CFE",
         "questionText":  "A router configuration uses the default reference bandwidth setting and also uses OSPF cost defaults as calculated by the router. Analyzing the exhibit\u0026#39;s output for interface serial 1, which answer lists the approximate interface bandwidth of that interface?",
         "explanation":  "First, note that the output of the show ip ospf interface\u0026nbsp;command lists a cost of 64, and the default setting on the auto-cost reference-bandwidth\u0026nbsp;OSPF configuration command is 100, meaning 100 Mbps. Finally, IOS uses a default OSPF cost calculation of:\n\nreference_bandwidth / interface_bandwidth\n\nNext, the formula needs to use consistent units, so using bits per second:\n\n100,000,000 bps / interface_bandwidth bps = 64\n\nSolving for interface_bandwidth:\n\ninterface_bandwidth = 100,000,000 / 64 = 1,562,500. Among the answers, it is closest to 1,500,000 bps = 1500 kbps = 1.5 mbps.",
@@ -21224,19 +20903,6 @@
                                   "Text":  "19",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "1217371F-384B-4DB2-9E9B-EEB7F34B9FD1",
-        "questionText":  "The configuration in the exhibit shows all commands that could impact the OSPF Hello and Dead intervals on three interfaces attached to router R1. Predict the settings IOS will use for each interface, and drag the numeric values on the left to the matching interface and OSPF setting combinations.\n\n\nR1(config)# interface g0/0/1\nR1(config-if)# ip ospf hello-interval 7\nR1(config)# interface g0/0/2\nR1(config-if)# ip ospf dead-interval 24\nR1(config)# interface g0/0/3\nR1(config-if)# ip ospf hello-interval 4\nR1(config-if)# ip ospf dead-interval 15\nR1(config-if)#",
-        "explanation":  "On LAN interfaces, IOS defaults to a Hello interval of 10 and a Dead interval of four times Hello, resulting in a calculation of 40 seconds. Beyond the defaults, if the configuration sets an interface\u0026#39;s Hello interval but not its Dead interval, IOS calculates the Dead interval as four times Hello. However, if the reverse is true, and the configuration sets the Dead interval to some value with no configuration of the Hello interval, IOS does not change the Hello interval. In this question, interface G0/0/1 shows the first case, and G0/0/2 shows the second case.\n\nFor interfaces with configuration setting a value for both Hello and Dead interval, IOS uses those settings.\n\nWith the above logic:\n\n\n\tG0/0/1 uses the configured 7-second Hello interval and 4x7 = 28 seconds for the Dead interval. \n\tG0/0/2 uses the configured 24-second Dead interval and the default 10-second Hello interval.\n\tG0/0/3 uses the configured 4-second and 15-second Hello and Dead intervals, respectively.",
-        "difficulty":  "1",
-        "comments":  "\u003cp\u003eInline exhibit\u003c/p\u003e\n",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -21805,19 +21471,6 @@
                           ]
     },
     {
-        "questionId":  "512A2051-CC09-4B6E-8519-A3BFFF64FC0D",
-        "questionText":  "Drag the default Cisco router administrative distance settings on the left to the matching routing information sources \u0026nbsp;on the right.",
-        "explanation":  "The following table lists all the values in numeric order for easier reference.\n\n\n\t\n\t\t\n\t\t\tRoute Type\n\t\t\tAdministrative Distance\n\t\t\n\t\t\n\t\t\tConnected\n\t\t\t0\n\t\t\n\t\t\n\t\t\tStatic\n\t\t\t1\n\t\t\n\t\t\n\t\t\tBGP (external routes)\n\t\t\t20\n\t\t\n\t\t\n\t\t\tEIGRP (internal routes)\n\t\t\t90\n\t\t\n\t\t\n\t\t\tOSPF\n\t\t\t110\n\t\t\n\t\t\n\t\t\tIS-IS\n\t\t\t115\n\t\t\n\t\t\n\t\t\tRIP\n\t\t\t120\n\t\t\n\t\t\n\t\t\tDHCP default route\n\t\t\t254\n\t\t\n\t\n\n\n\u0026nbsp;\n\u0026nbsp;",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "62E7FDDB-72BA-44DD-B2F2-A6C0D67190E9",
         "questionText":  "There are two directly connected OSPF configured routers. What will happen if you accidentally configure one OSPF router with a network type as broadcast and the other router with a network type as point-to-point?",
         "explanation":  "If you accidentally configure one OSPF router with a network type as broadcast and the other router with a network type as point-to-point:\n\t- Both routers will exchange their LSDB.\n\t- Both routers will reach full state.\n\t- Neither router will add IP routes to the routing tables.",
@@ -21879,19 +21532,6 @@
                                   "Text":  "None of the routers will exchange routing information.",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "8524777D-056B-47AB-9F83-B22634991790",
-        "questionText":  "The show ip route command on Cisco routers begins with a standard legend that lists codes. Those codes appear in the first few characters of the lines that contain the IP routing table that comes after the legend. Drag the code letters from the left to the source of routing information on the right.",
-        "explanation":  "The legend from the show ip route command is listed below for reference.\n\n\nR1# show ip route\nCodes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP\n       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area\n       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2\n       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP\n       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA\n       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2\n       ia - IS-IS inter area, * - candidate default, U - per-user static route\n       H - NHRP, G - NHRP registered, g - NHRP registration summary\n       o - ODR, P - periodic downloaded static route, l - LISP\n       a - application route\n       + - replicated route, % - next hop override, p - overrides from PfR\n       \u0026amp; - replicated local route overrides by connected",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -22944,19 +22584,6 @@
                                   "Text":  "FF02::1:FF71:FF01",
                                   "IsCorrect":  true
                               }
-                          ]
-    },
-    {
-        "questionId":  "62B4DD58-87C5-4DAA-889B-B24C4CB5900A",
-        "questionText":  "The show ipv6 interface command may list a code in brackets to the right of IPv6 addresses. Drag the code on the left to the description or context for which the code would appear in the command output.",
-        "explanation":  "The four codes refer to the following:\n\nEUI: Using the modified EUI-64 process to derive the IPv6 address based on the MAC address.\n\nTEN: Tenative. The address is tentative, pending the completion of the DAD check.\n\nCAL: A calendared address, meaning that the address has limited use (usually days or weeks) before the router or host removes it from service. Processes that lease or derive an address needing to re-lease or replace the address over time, such as DHCP and SLAAC, use these attributes.\n\nPRE: Preferred. The calendared address attribute means that, of all the calendared addresses for an interface, use this address for all new incoming connection requests.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
