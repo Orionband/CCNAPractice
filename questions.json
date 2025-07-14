@@ -4331,19 +4331,6 @@
                           ]
     },
     {
-        "questionId":  "34E9DCB0-7BAD-41C2-A8D7-2A6F4B3DAFBD",
-        "questionText":  "Match the attack type on the left with the goal of the attack on the right.",
-        "explanation":  "There are a number of human security vulnerabilities:\n\n\n\tSocial engineering is an attack that exploits human trust and social behavior.\n\tPhishing is a malicious invitation disguised as something legitimate.\n\tSpear phishing targets one or more specific individuals for a phishing attack.\n\tWhaling is an attack that targets a high-profile individual, such as a CEO or CIO of a company.\n\tVishing is an attack that uses voice calls.\n\tSmishing is an attack that uses text (SMS) messages.\n\tPharming uses legitimate services to send users to a compromised site.\n\tA watering hole identifies users and then attracts them to a compromised site.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "6EDC8DF2-E715-40EA-97FD-358E42AB5143",
         "questionText":  "Which of the following spoofing attacks eavesdrops on traffic?",
         "explanation":  "In a man-in-the-middle attack, an attacker is able to get in the direct path of two or more devices sending traffic. Once in position, the attacker can relay requests and responses back and forth, completing the traffic patterns. The attacker can modify the requests and responses it receives to its own goals while still being hidden from detection.\n\n\tA Denial-of-Service (DoS) attack\u0026rsquo;s goal is to reduce a system, service, application, device, or resource to the point that it can no longer function. In most cases the target is forced to complete an unplanned shutdown to mitigate the attack.\n\n\tIn a reflection attack, the attacker sends packets with a spoofed source address toward a live host, but the host is not the intended target. The attacker\u0026rsquo;s goal is to get the host in question to send traffic to the spoofed address that is the actual target.\n\n\tAnother similar attack is called an amplification attack, which is a reflection attack that can leverage an application or device to increase the amount of traffic being sent toward a target, even when the attacker is originally sending a small amount of data.",
@@ -4545,19 +4532,6 @@
                                   "Text":  "Biometric scanners",
                                   "IsCorrect":  true
                               }
-                          ]
-    },
-    {
-        "questionId":  "33D60D5B-2B41-4B1B-A0A5-AB28D0617990",
-        "questionText":  "Match the AAA terms to their respective definitions.",
-        "explanation":  "Authentication is validating who the user is.\n\t\t\u0026nbsp;\n\t\n\t\tAuthorization is determining what the specific user is allowed to actually accomplish or access.\n\t\t\u0026nbsp;\n\t\n\t\tAccount is the tracking of what the user has done and will do.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -5595,19 +5569,6 @@
                                   "Text":  "ARP ACLs",
                                   "IsCorrect":  true
                               }
-                          ]
-    },
-    {
-        "questionId":  "9A559BF6-460A-4B36-8833-95CE2DAD685D",
-        "questionText":  "Match the feature terms with their correct definitions.",
-        "explanation":  "Gratuitous ARP informs all hosts on a subnet about its current MAC addresses. This is a normal process when a device has recently changed its MAC address and needs to inform the rest of the subnet. Attackers like to take advantage of this feature for malicious intent.\n\n\tDHCP Snooping can be utilized to mitigate a rouge DHCP server providing address leases to end devices.\n\n\tDynamic ARP Inspection is used to validate ARP information as it\u0026rsquo;s coming into the device. This information is validated with the DHCP Snooping binding data and the ARP ACLs if configured.\n\n\tDHCP Server is a system that provides IP addresses dynamically to end devices.",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
@@ -8197,23 +8158,6 @@
                           ]
     },
     {
-        "questionId":  "E5E85876-9324-4AEC-9F7B-531021273E08",
-        "questionText":  "Match the two-tier topology designs with their definitions.",
-        "explanation":  "Here are diagram examples of each two-tier topology:",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-                         {
-                             "ExhibitId":  "212B1301-7CB8-42C5-B276-7D8CE169C543",
-                             "ExhibitTitle":  "3",
-                             "ExhibitFileName":  "https://builder.pearsonitcertification.com/Content/Exhibits/212B1301-7CB8-42C5-B276-7D8CE169C543/200301-ZZ-v2-2-13-10-A.jpg"
-                         }
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "F982DA33-0352-484A-929B-6BD41C0924A5",
         "questionText":  "A SOHO device has which capabilities?",
         "explanation":  "SOHOs traditionally have few requirements, so to meet these needs numerous capabilities are merged into a single physical device to allow for a more efficient and effective solution. Specifically, the SOHO device is also the Ethernet switch, wireless AP, router, and firewall for the small office/home office setup.\n\n\tToday, the SOHO device does not act as the host device.",
@@ -10766,19 +10710,6 @@
                           ]
     },
     {
-        "questionId":  "E8D7FE73-213A-4925-84A8-6D177ED2071F",
-        "questionText":  "Match the CRUD actions to the REST verb.",
-        "explanation":  "CRUD Action\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tREST Verb\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tCreate something new\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tPOST\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tGet information\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tGET\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tReplace values\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tPATCH, PUT\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tRemove information\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tDELETE\n\t\t\t\n\t\t\n\t\n\n\n\t\u0026nbsp;",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
-                          ]
-    },
-    {
         "questionId":  "4D13E8EC-F08F-4BE0-B583-7223E4EBEC60",
         "questionText":  "Which term is commonly used to refer to the \u0026ldquo;scheme\u0026rdquo; in a URI, according to REST API documentation and tools?",
         "explanation":  "The term scheme refers to the protocol or scheme used to access the resource. For example, in the URI https://example.com, \u0026ldquo;https\u0026rdquo; is the scheme or protocol that is used for communication. A Parameter or Query field in the URI is used to pass parameters or data to the server. Host:Port refers to the hostname of the application or controller and the port number used to connect. This is also known as the authority field in a URI structure. Finally, the Path field in the URI structure is commonly referred to as the Resource. It identifies the specific resource being accessed on the server.",
@@ -10924,19 +10855,6 @@
                                   "Text":  "Peer-to-peer architecture",
                                   "IsCorrect":  false
                               }
-                          ]
-    },
-    {
-        "questionId":  "BCFB581C-5035-46EA-AFA0-EBBB6D39FC77",
-        "questionText":  "Match the CRUD actions to the CRUD term.",
-        "explanation":  "CRUD Action\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tCRUD Term\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tCreate something new\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tCreate\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tGet information\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tRead\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tReplace values\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tUpdate\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tRemove information\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\tDelete\n\t\t\t\n\t\t\n\t\n\n\n\t\u0026nbsp;",
-        "difficulty":  "1",
-        "comments":  "",
-        "exhibits":  [
-
-                     ],
-        "answerChoices":  [
-
                           ]
     },
     {
