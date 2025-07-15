@@ -284,7 +284,13 @@
         "CCNP ENCOR 350-401": "questions_encor.json",
         "CCNP SCOR 350-701": "questions_scor.json",
         "Cisco CyberOps Associate": "questions_cyberops.json",
-        "CompTIA Security+": "questions_comptia_security.json"
+        "CompTIA Security+": "questions_comptia_security.json",
+        "CompTIA Network+": "questions_comptia_network.json",
+        "CompTIA Cloud+": "questions_comptia_cloud.json",
+        "CompTIA Linux+": "questions_comptia_linux.json",
+        "CompTIA PenTest+": "questions_comptia_pentest.json",
+        "(ISC)² CISSP": "questions_cissp.json",
+        "EC-Council CEH": "questions_certified_ethical_hacker.json"
     };
 
     let allQuestions = [];
@@ -445,7 +451,7 @@
                     const userValue = userInput.value.trim().toLowerCase();
                     const correctAnswers = (q.blanks && q.blanks[0] || "").split(',').map(ans => ans.trim().toLowerCase());
 
-                    if (correctAnswers.includes(userValue)) {
+                    if (userValue && correctAnswers.includes(userValue)) {
                         isQuestionCorrect = true;
                     }
                     userInput.classList.add(isQuestionCorrect ? 'correct' : 'incorrect');
